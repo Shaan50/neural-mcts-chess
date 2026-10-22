@@ -274,6 +274,7 @@ generation, not more code.
 ## Reproducing
 
 ```bash
+git clone https://github.com/Shaan50/neural-mcts-chess.git && cd neural-mcts-chess
 # environment (Apple silicon: the Python must be arm64, otherwise MPS is unavailable)
 python3 -m venv .venv && .venv/bin/pip install -e ".[dev]" && .venv/bin/python setup.py build_ext --inplace
 mkdir -p bin && cp "$(which stockfish)" bin/stockfish     # Stockfish 19 was used

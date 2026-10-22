@@ -7,7 +7,7 @@ handles the Lichess Bot API (challenges, game streams, clocks).
 ## 1. Export the weights
 
 ```bash
-neural-mcts-chess export runs/sl_medium/best.pt weights/neural-mcts-chess.pt --half   # or the self-play best
+make export   # fp16 copy of the best network (self-play best if the loop has run) -> weights/neural-mcts-chess.pt
 echo "uci\nisready\nposition startpos\ngo movetime 1000\nquit" | python -m neural_mcts_chess.uci   # smoke test
 ```
 

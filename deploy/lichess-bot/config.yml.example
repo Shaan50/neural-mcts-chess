@@ -57,7 +57,7 @@ challenge:
 greeting:
   hello: "Hi! I'm {me}, an AlphaZero-style engine (residual CNN + MCTS) trained on Lichess games and self-play. Good luck!"
   goodbye: "Good game!"
-  hello_spectators: "neural-mcts-chess: ResNet policy/value network + batched C++ MCTS. Source: https://github.com/<you>/neural-mcts-chess"
+  hello_spectators: "neural-mcts-chess: ResNet policy/value network + batched C++ MCTS. Source: https://github.com/Shaan50/neural-mcts-chess"
   goodbye_spectators: "Thanks for watching!"
 
 matchmaking:
