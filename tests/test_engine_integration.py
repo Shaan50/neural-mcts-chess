@@ -119,3 +119,16 @@ def test_selfplay_generation(evaluator, tmp_path):
         assert set(d["policy_idx"][i][d["policy_idx"][i] >= 0].tolist()) <= legal
     lines = (tmp_path / "sp_games.jsonl").read_text().splitlines()
     assert len(lines) == 6 and all("moves" in json.loads(x) for x in lines)
+
+
+def test_tactics_suite_parsing_and_solving(evaluator, tmp_path):
+    from azchess.experiments.tactics import load_epd, solve
+
+    epd = tmp_path / "mini.epd"
+    epd.write_text(
+        '7k/8/6K1/8/8/8/8/R7 w - - bm Ra8#; id "mate1";\n'
+        'r1bqkb1r/pppp1ppp/2n2n2/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR w KQkq - bm Qxf7#; id "scholar";\n'
+    )
+    suite = load_epd(epd)
+    assert [s[1] for s in suite] == [{"a1a8"}, {"h5f7"}]
+    assert solve(evaluator, suite, 200, leaves=4) == [True, True]  # mates are found even by a random net
