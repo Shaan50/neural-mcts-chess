@@ -108,7 +108,7 @@ def selfplay_table(res: Path) -> str:
     if hist:
         rows += [
             "",
-            "| Gen | Self-play games | Training positions | Gating score | Elo diff [95% CI] | SPRT | Accepted |",
+            "| Gen | Self-play games | Positions recorded | Gating score (vs current best) | Elo diff [95% CI] | SPRT | Accepted |",
             "|---:|---:|---:|---:|---|---|---|",
         ]
         for h in hist:

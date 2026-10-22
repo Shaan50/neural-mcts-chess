@@ -1,0 +1,26 @@
+{
+  "movegen": {
+    "python_chess_perft_nps": 2310352.2690403033,
+    "cpp_perft_nps": 99708129.83349597,
+    "python_node_ops_per_s": 42589.148269130565,
+    "cpp_node_ops_per_s": 547485.2677666997
+  },
+  "network": {
+    "device": "mps",
+    "nn_evals_per_s_b1": 291.9381820440661,
+    "nn_evals_per_s_b16": 5388.848873289235,
+    "nn_evals_per_s_b64": 11267.719106425378,
+    "nn_evals_per_s_b256": 13310.346752472838,
+    "nn_evals_per_s_b1024": 11986.856208037607
+  },
+  "search": {
+    "search_g1_l16_visits_per_s": 2682.43266405702,
+    "search_g1_l16_mean_batch": 15.384615384615385,
+    "search_g64_l8_visits_per_s": 12246.356511408423,
+    "search_g64_l8_mean_batch": 492.3076923076923,
+    "search_g256_l4_visits_per_s": 12146.185029689763,
+    "search_g256_l4_mean_batch": 1003.9215686274509,
+    "search_g256_l4_pipe_visits_per_s": 12372.833842788954,
+    "search_g256_l4_pipe_mean_batch": 501.96078431372547
+  }
+}

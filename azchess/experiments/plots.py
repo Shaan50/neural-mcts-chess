@@ -219,7 +219,7 @@ def tactics(path: Path, out: Path) -> None:
     plt.close(fig)
 
 
-def selfplay_generations(loop_dir: Path, out: Path) -> None:
+def selfplay_generations(loop_dir: Path, out: Path, results: Path) -> None:
     state = _load(loop_dir / "state.json")
     if not state or not state.get("history"):
         print(f"[plots] skip selfplay ({loop_dir} has no history)")
@@ -260,12 +260,38 @@ def selfplay_generations(loop_dir: Path, out: Path) -> None:
     ax.legend(loc="best")
     ax = axes[1]
     elo = state["elo"]
-    xs = sorted(int(g) for g in elo)
-    ax.step(xs, [elo[str(g)] for g in xs], where="post", color=SERIES[1], marker="s")
-    ax.set_title("Best network, Elo relative to generation 0")
+    xs = sorted(int(g) for g in elo) + [max(gens)]
+    ys = [elo[str(g)] for g in sorted(int(g) for g in elo)]
+    ys.append(ys[-1])
+    ax.step(xs, ys, where="post", color=SERIES[1], label="gating estimate")
+    ax.scatter(xs[:-1], ys[:-1], color=SERIES[1], marker="s", zorder=3)
+    h2h = (_load(results / "ablation_selfplay.json") or {}).get("h2h/sims=256")
+    if h2h:
+        x = max(gens) + 0.3
+        ax.errorbar(
+            [x],
+            [h2h["elo_diff"]],
+            yerr=[[h2h["elo_diff"] - h2h["elo_lo"]], [h2h["elo_hi"] - h2h["elo_diff"]]],
+            color=SERIES[0],
+            marker="o",
+            capsize=3,
+            elinewidth=1.2,
+            label=f"re-test, {h2h['games']} games",
+        )
+        ax.annotate(
+            f"{h2h['elo_diff']:+.0f}",
+            (x, h2h["elo_diff"]),
+            xytext=(8, -4),
+            textcoords="offset points",
+            color=INK_2,
+            fontsize=9,
+        )
+    ax.axhline(0, color=INK_2, linewidth=1)
+    ax.set_title("Best network vs pretrained (Elo)")
     ax.set_xlabel("generation")
-    ax.set_ylabel("relative Elo")
+    ax.set_ylabel("Elo relative to generation 0")
     ax.set_xticks(range(0, max(gens) + 1))
+    ax.legend(loc="center left", bbox_to_anchor=(0.4, 0.5))
     fig.tight_layout()
     fig.savefig(out / "selfplay_generations.png", dpi=160)
     plt.close(fig)
@@ -286,7 +312,7 @@ def main(argv: list[str] | None = None) -> None:
     elo_vs_sims(a.results / "ablation_sims.json", a.out)
     elo_vs_size(a.results / "ablation_size.json", a.out)
     tactics(a.results / "tactics.json", a.out)
-    selfplay_generations(a.loop, a.out)
+    selfplay_generations(a.loop, a.out, a.results)
     print(f"[plots] wrote figures to {a.out}")
 
 

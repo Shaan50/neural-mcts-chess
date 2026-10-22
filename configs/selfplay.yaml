@@ -1,7 +1,7 @@
 # Self-play refinement of the supervised medium network (sized for a single Apple-silicon GPU).
 run_dir: runs/selfplay
 init_checkpoint: runs/sl_medium/best.pt
-generations: 5
+generations: 8
 selfplay:
   games: 1200
   concurrency: 256
