@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68", "wheel", "pybind11>=2.12"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "azchess"
+version = "0.1.0"
+description = "AlphaZero-style chess engine: residual CNN + batched MCTS, pretrained on Lichess and refined by self-play"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Shaan Cheruvu" }]
+dependencies = [
+    "numpy>=1.26",
+    "torch>=2.2",
+    "chess>=1.10",
+    "zstandard>=0.22",
+    "requests>=2.31",
+    "pyyaml>=6.0",
+    "tensorboard>=2.15",
+    "matplotlib>=3.8",
+    "scipy>=1.11",
+    "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+wandb = ["wandb>=0.16"]
+
+[project.scripts]
+azchess = "azchess.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["azchess*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = ["slow: long-running tests (deselect with -m 'not slow')"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]

@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+*.so
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+# large / generated artifacts
+data/
+runs/
+checkpoints/
+logs/
+bin/
+deploy/lichess-bot/lichess-bot/
+deploy/lichess-bot/config.yml
