@@ -1,4 +1,4 @@
-# neural-mcts-chess: an AlphaZero-style chess engine on a student budget
+# neural-mcts-chess: an AlphaZero-style chess engine
 
 A residual CNN policy/value network plus batched Monte-Carlo tree search,
 pretrained on 540k high-rated Lichess games, refined by self-play with gating,
