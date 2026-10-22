@@ -69,9 +69,9 @@ class Evaluator:
         self.calls = 0
 
     @classmethod
-    def from_checkpoint(cls, path: str | Path, device: str = "auto", **kw) -> Evaluator:
+    def from_checkpoint(cls, path: str | Path, device: str = "auto", use_ema: bool = True, **kw) -> Evaluator:
         dev = pick_device(device)
-        model, _ = load_checkpoint(path, dev)
+        model, _ = load_checkpoint(path, dev, use_ema=use_ema)
         return cls(model, dev, **kw)
 
     @torch.inference_mode()

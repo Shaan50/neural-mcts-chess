@@ -271,6 +271,7 @@ def build_player(spec: str, device: str = "auto", evaluators: dict | None = None
 
     nn:path=runs/medium/best.pt,sims=400      MCTS with 400 visits per move
     nn:path=runs/medium/best.pt,sims=0        raw policy (no search)
+    nn:path=...,ema=0                         use the raw (non-EMA) weights
     sf:elo=1500,movetime=0.1                  Stockfish at UCI_Elo 1500
     sf:skill=3,depth=5                        Stockfish skill level 3
     random
@@ -279,8 +280,11 @@ def build_player(spec: str, device: str = "auto", evaluators: dict | None = None
     evaluators = evaluators if evaluators is not None else {}
     if kind == "nn":
         path = kv.pop("path")
-        if path not in evaluators:
-            evaluators[path] = Evaluator.from_checkpoint(path, device)
+        use_ema = bool(kv.pop("ema", 1))
+        key = path if use_ema else f"{path}#raw"
+        if key not in evaluators:
+            evaluators[key] = Evaluator.from_checkpoint(path, device, use_ema=use_ema)
+        path = key
         sims = kv.pop("sims", 400)
         name = kv.pop("name", None)
         if sims <= 1:

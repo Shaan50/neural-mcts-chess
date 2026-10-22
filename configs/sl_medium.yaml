@@ -8,7 +8,7 @@ model:
   se_ratio: 0
   value_head: wdl
 batch_size: 1024
-steps: 40000            # ~41M positions, ~1 epoch of the 2025-01 slice
+steps: 30000            # ~31M positions, ~0.8 epoch of the 2025-01 slice (sized to the local compute budget)
 optimizer: adamw
 lr: 0.002
 min_lr_ratio: 0.02

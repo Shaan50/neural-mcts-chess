@@ -66,10 +66,20 @@ def _label_end(ax, x, y, text, color) -> None:
     ax.annotate(text, (x, y), xytext=(6, 0), textcoords="offset points", va="center", color=INK_2, fontsize=9)
 
 
-def training_curves(runs: dict[str, Path], out: Path) -> None:
+def _val_points(name: str, run: Path, results: Path) -> list[dict]:
+    """Prefer per-snapshot revalidation (one consistent procedure); fall back to
+    the validation entries logged during training (last entry per step)."""
+    snap = _load(results / f"snapshot_val_{run.name}.json")
+    if snap:
+        return [{"step": int(k), **v} for k, v in sorted(snap.items(), key=lambda kv: int(kv[0]))]
+    by_step = {m["step"]: m for m in _metrics(run) if m["split"] == "val"}
+    return [by_step[k] for k in sorted(by_step)]
+
+
+def training_curves(runs: dict[str, Path], out: Path, results: Path) -> None:
     fig, axes = plt.subplots(1, 2, figsize=(10, 3.8))
     for k, (name, run) in enumerate(runs.items()):
-        val = [m for m in _metrics(run) if m["split"] == "val"]
+        val = _val_points(name, run, results)
         if not val:
             continue
         steps = [m["step"] * 1024 / 1e6 for m in val]
@@ -222,7 +232,7 @@ def selfplay_generations(loop_dir: Path, out: Path) -> None:
     elo = state["elo"]
     xs = sorted(int(g) for g in elo)
     ax.step(xs, [elo[str(g)] for g in xs], where="post", color=SERIES[1], marker="s")
-    ax.set_title("Cumulative Elo of the best network (vs generation 0)")
+    ax.set_title("Best network, Elo relative to generation 0")
     ax.set_xlabel("generation")
     ax.set_ylabel("relative Elo")
     ax.set_xticks(range(0, max(gens) + 1))
@@ -241,7 +251,7 @@ def main(argv: list[str] | None = None) -> None:
     a.out.mkdir(parents=True, exist_ok=True)
     _style()
     runs = {k: Path(v) for k, v in (r.split("=", 1) for r in a.runs)}
-    training_curves(runs, a.out)
+    training_curves(runs, a.out, a.results)
     elo_vs_steps(a.results / "elo_vs_steps_sl_medium.json", a.out)
     elo_vs_sims(a.results / "ablation_sims.json", a.out)
     elo_vs_size(a.results / "ablation_size.json", a.out)
