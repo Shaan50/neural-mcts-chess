@@ -34,6 +34,16 @@ sustained Q of about -0.92, and offers or accepts draws in dead-equal endgames.
 `engines/neural-mcts-chess.sh` launches `python -m neural_mcts_chess.uci` with `weights/neural-mcts-chess.pt`.
 Override with `NEURAL_MCTS_CHESS_WEIGHTS=/path/to/net.pt`.
 
+## Day-to-day commands (from the repo root)
+
+```bash
+make bot          # run in this terminal; Ctrl+C to stop (keeps the Mac awake)
+make bot-bg       # run in the background, logging to logs/lichess-bot.log
+make bot-logs     # follow the background log
+make bot-status   # local process + whether Lichess shows the bot online
+make bot-stop     # graceful stop (same as Ctrl+C); FORCE=1 quits even mid-game
+```
+
 ## Docker
 
 ```bash

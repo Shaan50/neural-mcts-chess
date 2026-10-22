@@ -5,7 +5,7 @@ MONTH   ?= 2025-01
 BYTES   ?= 3G
 SF      ?= bin/stockfish
 
-.PHONY: help setup build test lint data train-tiny train-small train-medium selfplay accuracy ablations tactics plots report export bench uci
+.PHONY: bot bot-bg bot-stop bot-status bot-logs help setup build test lint data train-tiny train-small train-medium selfplay accuracy ablations tactics plots report export bench uci
 
 help:
 	@grep -E '^[a-z-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  %-14s %s\n", $$1, $$2}'
@@ -61,3 +61,14 @@ bench: ## throughput benchmarks
 	$(PY) -m neural_mcts_chess.tools.bench --weights runs/sl_medium/best.pt --out results/bench.json
 uci: ## run the UCI engine
 	$(PY) -m neural_mcts_chess.uci --weights weights/neural-mcts-chess.pt
+
+bot: ## run the Lichess bot in this terminal (Ctrl+C to stop)
+	@scripts/bot.sh start
+bot-bg: ## run the Lichess bot in the background (logs: make bot-logs)
+	@scripts/bot.sh start --bg
+bot-stop: ## stop the Lichess bot (FORCE=1 quits immediately, even mid-game)
+	@scripts/bot.sh stop $(if $(FORCE),--force,)
+bot-status: ## is the bot running locally and online on Lichess?
+	@scripts/bot.sh status
+bot-logs: ## follow the background bot log
+	@scripts/bot.sh logs
