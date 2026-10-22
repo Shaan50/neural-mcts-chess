@@ -156,6 +156,7 @@ PYBIND11_MODULE(_core, m) {
       .def("set_position", &Search::set_position)
       .def("position", [](const Search& s) { return Position(s.position()); })
       .def("advance", &Search::advance)
+      .def("advance_uci", [](Search& s, const std::string& uci) { s.advance(s.position().parse_uci(uci)); })
       .def("begin", &Search::begin, py::arg("add_noise") = false)
       .def("done", &Search::done)
       .def("pending", &Search::pending)
@@ -175,15 +176,22 @@ PYBIND11_MODULE(_core, m) {
 
   m.def(
       "gather_batch",
-      [](const std::vector<Search*>& searches, int max_leaves, int target_visits) {
+      [](const std::vector<Search*>& searches, int max_leaves, py::object target_visits) {
+        std::vector<int> targets;
+        if (py::isinstance<py::int_>(target_visits)) {
+          targets.assign(searches.size(), target_visits.cast<int>());
+        } else {
+          targets = target_visits.cast<std::vector<int>>();
+          if (targets.size() != searches.size()) throw std::invalid_argument("need one target per search");
+        }
         Batch batch;
         std::vector<int32_t> per(searches.size());
         int not_done = 0;
         {
           py::gil_scoped_release release;
           for (size_t i = 0; i < searches.size(); ++i) {
-            per[i] = searches[i]->gather(batch, max_leaves, target_visits);
-            if (!searches[i]->done(target_visits)) ++not_done;
+            per[i] = searches[i]->gather(batch, max_leaves, targets[i]);
+            if (!searches[i]->done(targets[i])) ++not_done;
           }
         }
         const py::ssize_t rows = batch.rows;
@@ -192,8 +200,8 @@ PYBIND11_MODULE(_core, m) {
                               to_array(per, {py::ssize_t(per.size())}), not_done);
       },
       py::arg("searches"), py::arg("max_leaves"), py::arg("target_visits"),
-      "Collect leaves from every search. Returns (bb int64[B,12], meta uint8[B,4], legal_flat int64[L], "
-      "n_legal int32[B], leaves_per_search int32[S], searches_not_done).");
+      "Collect leaves from every search (target_visits: int or one int per search). Returns (bb int64[B,12], "
+      "meta uint8[B,4], legal_flat int64[L], n_legal int32[B], leaves_per_search int32[S], searches_not_done).");
 
   m.def(
       "apply_batch",

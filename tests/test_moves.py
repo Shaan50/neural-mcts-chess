@@ -40,7 +40,9 @@ def test_underpromotion_planes():
     assert move_to_index(chess.Move.from_uci("a7a8n"), chess.WHITE) == (64 + 1 * 3 + 0) * 64 + 48
     assert move_to_index(chess.Move.from_uci("a7b8r"), chess.WHITE) == (64 + 2 * 3 + 2) * 64 + 48
     # queen promotion uses the ordinary queen-move plane
-    assert move_to_index(chess.Move.from_uci("a7a8q"), chess.WHITE) == move_to_index(chess.Move.from_uci("a7a8"), chess.WHITE)
+    assert move_to_index(chess.Move.from_uci("a7a8q"), chess.WHITE) == move_to_index(
+        chess.Move.from_uci("a7a8"), chess.WHITE
+    )
     # black under-promotion capturing towards the h-file (+1 file from its perspective too)
     assert move_to_index(chess.Move.from_uci("b2c1b"), chess.BLACK) == (64 + 2 * 3 + 1) * 64 + (9 ^ 56)
 

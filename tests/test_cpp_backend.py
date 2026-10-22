@@ -63,7 +63,7 @@ def _check_equal(core_pos, board: chess.Board, py_pos: PyPosition):
 def test_random_games_match_python_chess(core):
     rng = random.Random(7)
     n = 0
-    for game in range(120):
+    for _game in range(120):
         fen = rng.choice(TRICKY_FENS)
         board = chess.Board(fen)
         py_pos = PyPosition(fen)

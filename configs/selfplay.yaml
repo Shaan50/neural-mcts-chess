@@ -1,0 +1,37 @@
+# Self-play refinement of the supervised medium network (sized for a single Apple-silicon GPU).
+run_dir: runs/selfplay
+init_checkpoint: runs/sl_medium/best.pt
+generations: 5
+selfplay:
+  games: 1200
+  concurrency: 256
+  sims: 200            # full searches (25% of moves; recorded as training samples)
+  fast_sims: 32        # playout cap randomisation: cheap searches for the remaining moves
+  full_search_prob: 0.25
+  leaves_per_search: 4
+  temperature: 1.0
+  temp_plies: 30
+  dirichlet_alpha: 0.3
+  dirichlet_epsilon: 0.25
+  resign_threshold: -0.92
+  resign_moves: 3
+  no_resign_frac: 0.1
+  max_plies: 400
+  book_frac: 0.5      # half the games start from a book opening for diversity
+window: 3
+sl_data: [data/shards/train]
+sl_mix: 0.3
+val_data: [data/shards/val]
+train_steps: 400
+batch_size: 512
+lr: 0.0003
+weight_decay: 0.01
+q_ratio: 0.25
+value_weight: 1.0
+gating_games: 100
+gating_sims: 160
+gating_threshold: 0.55
+eval_opponents: []
+eval_games: 40
+eval_sims: 200
+seed: 0

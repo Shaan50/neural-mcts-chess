@@ -1,0 +1,28 @@
+# Configuration for a single rented CUDA GPU (e.g. one RTX 4090 / A10G, ~$0.5-1/h):
+# 15x192 SE-ResNet, bf16 autocast. ~3-4 epochs over ~200M positions fits in < $60.
+run_dir: runs/sl_large
+train_data: [data/shards/train]
+val_data: [data/shards/val]
+model:
+  blocks: 15
+  filters: 192
+  se_ratio: 4
+  value_head: wdl
+batch_size: 2048
+steps: 300000
+optimizer: adamw
+lr: 0.002
+min_lr_ratio: 0.02
+warmup_steps: 2000
+weight_decay: 0.01
+value_weight: 0.5
+grad_clip: 10.0
+amp: true
+ema_decay: 0.9995
+workers: 8
+log_every: 200
+val_every: 5000
+val_positions: 500000
+ckpt_every: 5000
+snapshot_every: 20000
+seed: 0

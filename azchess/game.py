@@ -105,6 +105,12 @@ class PyPosition:
     def repetition_count(self) -> int:
         return self._counts[self._keys[-1]]
 
+    def repeated_within(self, plies: int) -> bool:
+        """True if the current position already occurred within the last ``plies`` plies."""
+        key, n = self._keys[-1], len(self._keys)
+        lo = max(0, n - 1 - plies, n - 1 - self.board.halfmove_clock)
+        return any(self._keys[i] == key for i in range(n - 3, lo - 1, -2))
+
     def ply(self) -> int:
         return len(self.board.move_stack)
 

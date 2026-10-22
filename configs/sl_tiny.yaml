@@ -1,0 +1,27 @@
+# Supervised pretraining: 4 residual blocks x 32 filters (no SE: SE halves throughput on Apple MPS).
+run_dir: runs/sl_tiny
+train_data: [data/shards/train]
+val_data: [data/shards/val]
+model:
+  blocks: 4
+  filters: 32
+  se_ratio: 0
+  value_head: wdl
+batch_size: 1024
+steps: 40000            # ~41M positions, ~1 epoch of the 2025-01 slice
+optimizer: adamw
+lr: 0.002
+min_lr_ratio: 0.02
+warmup_steps: 1000
+weight_decay: 0.01
+value_weight: 0.5    # value targets are game results shared by ~80 correlated positions; down-weight to limit overfitting
+grad_clip: 10.0
+amp: true
+ema_decay: 0.999
+workers: 4
+log_every: 100
+val_every: 2000
+val_positions: 200000
+ckpt_every: 2000
+snapshot_every: 4000
+seed: 0
