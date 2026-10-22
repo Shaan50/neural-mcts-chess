@@ -6,6 +6,9 @@ measured in Elo against calibrated Stockfish, and deployable as a Lichess bot.
 Everything, from data to the final ablations, ran on one laptop GPU (Apple M5,
 16 GB, PyTorch MPS) in about a day of wall-clock time.
 
+**Play it on Lichess:** [NeuralMCTSBot](https://lichess.org/@/NeuralMCTSBot)
+(online while the author's machine runs it; challenge it to a casual or rated game).
+
 | | Result |
 |---|---|
 | Held-out human-move prediction (10×128 net) | **52.7% top-1, 90.2% top-5** on 399k positions from unseen games |
@@ -380,8 +383,8 @@ results/              raw JSON results behind every table
   validated and fast, but the data volume is about 0.02% of AlphaZero's.
 - **No pondering, MultiPV or Chess960.** The Lichess bot accepts standard
   chess only.
-- **Not deployed to a live account here.** Creating a Lichess BOT account
-  irreversibly converts it and requires the owner's API token.
-  [deploy/README.md](deploy/README.md) has the three-step procedure. The
-  engine wrapper itself is tested through python-chess's UCI client, which is
-  exactly how lichess-bot drives it.
+- **The Lichess bot runs on a laptop.** [NeuralMCTSBot](https://lichess.org/@/NeuralMCTSBot)
+  is online only while the author's Mac is running it, plays one game at a time,
+  and searches on the laptop GPU, so it is weaker at bullet than at blitz and rapid.
+  [deploy/README.md](deploy/README.md) covers running your own instance, including
+  a Docker image for an always-on server.
