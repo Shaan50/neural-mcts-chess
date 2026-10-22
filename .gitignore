@@ -15,3 +15,7 @@ logs/
 bin/
 deploy/lichess-bot/lichess-bot/
 deploy/lichess-bot/config.yml
+weights/*.pt
+weights/*.onnx
+weights/*.ts
+results/*.tmp

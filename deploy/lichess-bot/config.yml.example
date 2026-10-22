@@ -1,0 +1,73 @@
+# lichess-bot configuration for AZChess. Copy to deploy/lichess-bot/config.yml
+# (git-ignored) or let deploy/setup_lichess_bot.sh do it. Keys omitted here take
+# lichess-bot's defaults (see lichess-bot/config.yml.default).
+token: "set-me-or-export-LICHESS_BOT_TOKEN"
+url: "https://lichess.org/"
+
+engine:
+  dir: "../engines/"                       # relative to the lichess-bot checkout (deploy/lichess-bot/lichess-bot)
+  name: "azchess.sh"                       # wrapper that launches `python -m azchess.uci`
+  protocol: "uci"
+  ponder: false                            # pondering not implemented
+  silence_stderr: true                     # torch warnings go to stderr
+  polyglot:
+    enabled: false
+  draw_or_resign:
+    resign_enabled: true
+    resign_score: -900                     # cp from the engine's Q->cp mapping (Q ~ -0.92)
+    resign_moves: 4
+    offer_draw_enabled: true
+    offer_draw_score: 10
+    offer_draw_moves: 10
+    offer_draw_pieces: 8
+  online_moves:
+    online_egtb:
+      enabled: false                       # keep games 100% engine-played
+  uci_options:
+    MoveOverhead: 400                      # network latency to lichess
+    MinibatchSize: 16
+    NNCacheSize: 400000
+    SmartPruning: true
+    UCI_ShowWDL: true
+
+abort_time: 30
+move_overhead: 1000
+rate_limiting_delay: 0
+
+challenge:
+  concurrency: 1                           # one GPU-backed search at a time
+  sort_by: "best"
+  accept_bot: true
+  only_bot: false
+  max_increment: 20
+  min_increment: 0
+  max_base: 1800
+  min_base: 60                             # Python search: avoid ultra-bullet
+  variants:
+    - standard
+  time_controls:
+    - bullet
+    - blitz
+    - rapid
+    - classical
+  modes:
+    - casual
+    - rated
+
+greeting:
+  hello: "Hi! I'm {me}, an AlphaZero-style engine (residual CNN + MCTS) trained on Lichess games and self-play. Good luck!"
+  goodbye: "Good game!"
+  hello_spectators: "AZChess: ResNet policy/value network + batched C++ MCTS. Source: https://github.com/<you>/azchess"
+  goodbye_spectators: "Thanks for watching!"
+
+matchmaking:
+  allow_matchmaking: false                 # set true to challenge other bots automatically
+  challenge_variant: "standard"
+  challenge_timeout: 30
+  challenge_initial_time:
+    - 180
+  challenge_increment:
+    - 2
+  opponent_rating_difference: 300
+  rating_preference: "none"
+  challenge_mode: "random"

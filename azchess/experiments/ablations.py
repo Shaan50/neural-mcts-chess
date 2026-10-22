@@ -62,7 +62,7 @@ def adaptive_ladder(
     levels: int = 3,
     spacing: int = 200,
     start: int = 1700,
-    movetime: float = 0.1,
+    movetime: float = 0.2,
     concurrency: int = 16,
     evaluators: dict | None = None,
 ) -> dict:
@@ -245,7 +245,7 @@ def main(argv: list[str] | None = None) -> None:
     def common(sp):
         sp.add_argument("--games", type=int, default=32, help="games per ladder level")
         sp.add_argument("--probe-games", type=int, default=12)
-        sp.add_argument("--movetime", type=float, default=0.1, help="Stockfish seconds per move")
+        sp.add_argument("--movetime", type=float, default=0.2, help="Stockfish seconds per move")
         sp.add_argument("--out", default=None)
 
     s = sub.add_parser("sims")
