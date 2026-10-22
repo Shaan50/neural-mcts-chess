@@ -51,6 +51,15 @@ class Results:
         tmp.replace(self.path)
 
 
+def ladder_levels(estimate: float, levels: int = 3, spacing: int = 200) -> list[int]:
+    """Stockfish levels centred on ``estimate`` (rounded to 50), shifted to stay
+    inside Stockfish's UCI_Elo range. Clamping happens after rounding."""
+    half = spacing * (levels // 2)
+    centre = int(round(estimate / 50.0) * 50)
+    centre = min(max(centre, SF_MIN + half), SF_MAX - half)
+    return [centre + spacing * (k - levels // 2) for k in range(levels)]
+
+
 def sf_spec(elo: int, movetime: float) -> str:
     return f"sf:elo={int(elo)},movetime={movetime}"
 
@@ -90,8 +99,7 @@ def adaptive_ladder(
     opp = [p["known_elo"] for p in probes for _ in range(p["games"])]
     sc = [g_score for p in probes for g_score in _scores(p)]
     est = mle_rating(opp, sc).elo
-    centre = int(round(min(max(est, SF_MIN + spacing * (levels // 2)), SF_MAX - spacing * (levels // 2)) / 50.0) * 50)
-    ladder = [centre + spacing * (k - levels // 2) for k in range(levels)]
+    ladder = ladder_levels(est, levels, spacing)
     print(f"[ladder] estimate {est:.0f} -> ladder {ladder}", flush=True)
     full = evaluate(
         player_spec, [sf_spec(e, movetime) for e in ladder], games, concurrency, evaluators=evaluators, bootstrap=500
@@ -157,7 +165,12 @@ def cmd_sims(a) -> None:
         if res.has(key):
             continue
         r = adaptive_ladder(
-            f"nn:path={a.model},sims={sims}", a.probe_games, a.games, movetime=a.movetime, evaluators=evaluators
+            f"nn:path={a.model},sims={sims}",
+            a.probe_games,
+            a.games,
+            movetime=a.movetime,
+            concurrency=a.concurrency,
+            evaluators=evaluators,
         )
         res.put(key, {"sims": sims, "model": a.model, **r})
 
@@ -174,7 +187,12 @@ def cmd_size(a) -> None:
             ev = evaluators.get(path) or Evaluator.from_checkpoint(path)
             evaluators[path] = ev
             r = adaptive_ladder(
-                f"nn:path={path},sims={sims}", a.probe_games, a.games, movetime=a.movetime, evaluators=evaluators
+                f"nn:path={path},sims={sims}",
+                a.probe_games,
+                a.games,
+                movetime=a.movetime,
+                concurrency=a.concurrency,
+                evaluators=evaluators,
             )
             res.put(
                 key,
@@ -205,7 +223,12 @@ def cmd_steps(a) -> None:
             if res.has(key):
                 continue
             r = adaptive_ladder(
-                f"nn:path={snap},sims={sims}", a.probe_games, a.games, movetime=a.movetime, evaluators=evaluators
+                f"nn:path={snap},sims={sims}",
+                a.probe_games,
+                a.games,
+                movetime=a.movetime,
+                concurrency=a.concurrency,
+                evaluators=evaluators,
             )
             res.put(key, {"step": step, "sims": sims, "path": str(snap), **r})
             evaluators.clear()
@@ -221,7 +244,12 @@ def cmd_selfplay(a) -> None:
         key = f"{name}/sims={a.sims}"
         if not res.has(key):
             r = adaptive_ladder(
-                f"nn:path={path},sims={a.sims}", a.probe_games, a.games, movetime=a.movetime, evaluators=evaluators
+                f"nn:path={path},sims={a.sims}",
+                a.probe_games,
+                a.games,
+                movetime=a.movetime,
+                concurrency=a.concurrency,
+                evaluators=evaluators,
             )
             res.put(key, {"model": name, "path": path, "sims": a.sims, **r})
     key = f"h2h/sims={a.sims}"
@@ -246,6 +274,7 @@ def main(argv: list[str] | None = None) -> None:
         sp.add_argument("--games", type=int, default=32, help="games per ladder level")
         sp.add_argument("--probe-games", type=int, default=12)
         sp.add_argument("--movetime", type=float, default=0.2, help="Stockfish seconds per move")
+        sp.add_argument("--concurrency", type=int, default=16, help="simultaneous games")
         sp.add_argument("--out", default=None)
 
     s = sub.add_parser("sims")

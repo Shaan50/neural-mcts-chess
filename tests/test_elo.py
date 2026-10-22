@@ -4,6 +4,7 @@ import numpy as np
 import pytest
 
 from azchess.eval.elo import elo_from_score, expected_score, mle_rating, performance, sprt
+from azchess.experiments.ablations import SF_MAX, SF_MIN, ladder_levels
 
 
 def test_expected_score_and_inverse():
@@ -46,3 +47,11 @@ def test_sprt_decisions():
     assert sprt(300, 200, 100).decision == "H1"
     assert sprt(100, 200, 300).decision == "H0"
     assert sprt(5, 10, 5).decision == "continue"
+
+
+@pytest.mark.parametrize("est", [800, 1100, 1480, 1530, 2000, 2975, 3300])
+def test_ladder_levels_stay_in_stockfish_range(est):
+    lv = ladder_levels(est)
+    assert len(lv) == 3 and lv == sorted(lv)
+    assert SF_MIN <= lv[0] and lv[-1] <= SF_MAX
+    assert lv[1] - lv[0] == 200

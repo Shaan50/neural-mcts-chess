@@ -189,6 +189,31 @@ def elo_vs_size(path: Path, out: Path) -> None:
     plt.close(fig)
 
 
+def tactics(path: Path, out: Path) -> None:
+    data = _load(path)
+    if not data:
+        print(f"[plots] skip tactics ({path} missing)")
+        return
+    fig, ax = plt.subplots(figsize=(6.5, 3.8))
+    for k, (name, res) in enumerate(list(data.items())[:3]):
+        pts = sorted((int(s), v["solved"] / v["total"]) for s, v in res.items())
+        xs = [max(s, 1) for s, _ in pts]
+        ys = [y * 100 for _, y in pts]
+        ax.plot(xs, ys, color=SERIES[k], marker=MARKERS[k], label=name)
+        _label_end(ax, xs[-1], ys[-1], f"{ys[-1]:.0f}%", SERIES[k])
+    ax.set_xscale("log")
+    ax.set_xticks(xs)
+    ax.set_xticklabels(["raw\npolicy" if s <= 1 else str(s) for s, _ in pts])
+    ax.set_title("Win At Chess tactics solved (300 positions)")
+    ax.set_xlabel("visits per position (log scale)")
+    ax.set_ylabel("% solved")
+    if len(data) > 1:
+        ax.legend(loc="lower right")
+    fig.tight_layout()
+    fig.savefig(out / "tactics.png", dpi=160)
+    plt.close(fig)
+
+
 def selfplay_generations(loop_dir: Path, out: Path) -> None:
     state = _load(loop_dir / "state.json")
     if not state or not state.get("history"):
@@ -255,6 +280,7 @@ def main(argv: list[str] | None = None) -> None:
     elo_vs_steps(a.results / "elo_vs_steps_sl_medium.json", a.out)
     elo_vs_sims(a.results / "ablation_sims.json", a.out)
     elo_vs_size(a.results / "ablation_size.json", a.out)
+    tactics(a.results / "tactics.json", a.out)
     selfplay_generations(a.loop, a.out)
     print(f"[plots] wrote figures to {a.out}")
 

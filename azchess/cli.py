@@ -13,6 +13,8 @@ COMMANDS = {
     "selfplay": ("azchess.selfplay.loop", "self-play reinforcement loop with gating"),
     "eval": ("azchess.eval.run", "play matches and estimate Elo"),
     "ablate": ("azchess.experiments.ablations", "run ablation experiments"),
+    "tactics": ("azchess.experiments.tactics", "Win At Chess tactical test suite"),
+    "accuracy": ("azchess.experiments.accuracy", "held-out move-prediction accuracy"),
     "plots": ("azchess.experiments.plots", "render figures from results/"),
     "report": ("azchess.experiments.report", "render markdown result tables"),
     "uci": ("azchess.uci.engine", "run the UCI engine"),

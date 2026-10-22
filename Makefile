@@ -5,7 +5,7 @@ MONTH   ?= 2025-01
 BYTES   ?= 3G
 SF      ?= bin/stockfish
 
-.PHONY: help setup build test lint data train-tiny train-small train-medium selfplay accuracy ablations plots report export bench uci
+.PHONY: help setup build test lint data train-tiny train-small train-medium selfplay accuracy ablations tactics plots report export bench uci
 
 help:
 	@grep -E '^[a-z-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  %-14s %s\n", $$1, $$2}'
@@ -46,6 +46,9 @@ ablations: ## Elo ablations vs Stockfish (search, size, training step, self-play
 	$(PY) -m azchess.experiments.ablations size --models tiny=runs/sl_tiny/best.pt small=runs/sl_small/best.pt medium=runs/sl_medium/best.pt --sims 0 256
 	$(PY) -m azchess.experiments.ablations steps --run runs/sl_medium --sims 0
 	$(PY) -m azchess.experiments.ablations selfplay --sl runs/sl_medium/best.pt --loop runs/selfplay --sims 256
+
+tactics: ## Win At Chess solve rate vs visits
+	$(PY) -m azchess.experiments.tactics medium=runs/sl_medium/best.pt --sims 0 64 256 800 3200
 
 plots: ## render docs/figures
 	$(PY) -m azchess.experiments.plots

@@ -120,6 +120,19 @@ def selfplay_table(res: Path) -> str:
     return "\n".join(rows)
 
 
+def tactics_table(res: Path) -> str:
+    d = _load(res / "tactics.json")
+    if not d:
+        return ""
+    budgets = sorted({int(s) for r in d.values() for s in r}, key=int)
+    head = "| Network | " + " | ".join("raw policy" if b <= 1 else f"{b} visits" for b in budgets) + " |"
+    rows = [head, "|---|" + "---:|" * len(budgets)]
+    for name, r in d.items():
+        cells = [f"{r[str(b)]['solved']}/{r[str(b)]['total']}" if str(b) in r else "–" for b in budgets]
+        rows.append(f"| {name} | " + " | ".join(cells) + " |")
+    return "\n".join(rows)
+
+
 def main(argv: list[str] | None = None) -> None:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--results", type=Path, default=Path("results"))
@@ -127,6 +140,7 @@ def main(argv: list[str] | None = None) -> None:
     for title, fn in [
         ("Held-out move prediction", accuracy_table),
         ("Raw policy vs MCTS", sims_table),
+        ("Tactics (Win At Chess, 300 positions)", tactics_table),
         ("Network size vs strength", size_table),
         ("Elo vs training step", steps_table),
         ("Pretraining-only vs self-play-refined", selfplay_table),
