@@ -1,0 +1,90 @@
+{
+  "4000": {
+    "policy_loss": 2.028562473602295,
+    "value_loss": 0.8549301441764832,
+    "policy_top1": 0.3924549999332428,
+    "policy_top5": 0.7675149999809265,
+    "policy_entropy": 2.054611167449951,
+    "value_mse": 0.7569191029739379,
+    "value_sign_acc": 0.27645499995231626,
+    "positions": 200000,
+    "bn_recalibrated": true
+  },
+  "8000": {
+    "policy_loss": 1.9289801315307618,
+    "value_loss": 0.8457872489929199,
+    "policy_top1": 0.41361,
+    "policy_top5": 0.7951799999046326,
+    "policy_entropy": 1.9542039124679564,
+    "value_mse": 0.7458104643440246,
+    "value_sign_acc": 0.29117500003814695,
+    "positions": 200000,
+    "bn_recalibrated": true
+  },
+  "12000": {
+    "policy_loss": 1.879243743019104,
+    "value_loss": 0.8406650647735596,
+    "policy_top1": 0.42415499991416933,
+    "policy_top5": 0.8079300001335145,
+    "policy_entropy": 1.9019691910552978,
+    "value_mse": 0.7401589348983765,
+    "value_sign_acc": 0.2980899999523163,
+    "positions": 200000,
+    "bn_recalibrated": true
+  },
+  "16000": {
+    "policy_loss": 1.844816815109253,
+    "value_loss": 0.8372899999809265,
+    "policy_top1": 0.43081499999046324,
+    "policy_top5": 0.8167600000572205,
+    "policy_entropy": 1.865624925918579,
+    "value_mse": 0.7361478257751465,
+    "value_sign_acc": 0.3080249999332428,
+    "positions": 200000,
+    "bn_recalibrated": true
+  },
+  "20000": {
+    "policy_loss": 1.8248757664489745,
+    "value_loss": 0.8340430732727051,
+    "policy_top1": 0.4354949999332428,
+    "policy_top5": 0.8216000000381469,
+    "policy_entropy": 1.843866943283081,
+    "value_mse": 0.7333864056968689,
+    "value_sign_acc": 0.314285,
+    "positions": 200000,
+    "bn_recalibrated": true
+  },
+  "24000": {
+    "policy_loss": 1.8134136165618897,
+    "value_loss": 0.8325435266304017,
+    "policy_top1": 0.4382300000858307,
+    "policy_top5": 0.824535,
+    "policy_entropy": 1.8306881614685058,
+    "value_mse": 0.7325724073410034,
+    "value_sign_acc": 0.3197650000858307,
+    "positions": 200000,
+    "bn_recalibrated": true
+  },
+  "28000": {
+    "policy_loss": 1.8087768117904663,
+    "value_loss": 0.8314515855407715,
+    "policy_top1": 0.43936500005722046,
+    "policy_top5": 0.8255199999046325,
+    "policy_entropy": 1.822195859298706,
+    "value_mse": 0.7308914637947083,
+    "value_sign_acc": 0.32053999990463256,
+    "positions": 200000,
+    "bn_recalibrated": true
+  },
+  "30000": {
+    "policy_loss": 1.8076147146987915,
+    "value_loss": 0.83118901845932,
+    "policy_top1": 0.439925,
+    "policy_top5": 0.8257600001907348,
+    "policy_entropy": 1.8217390940856935,
+    "value_mse": 0.7305238178634643,
+    "value_sign_acc": 0.3213700000667572,
+    "positions": 200000,
+    "bn_recalibrated": true
+  }
+}

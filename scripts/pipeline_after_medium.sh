@@ -25,6 +25,6 @@ $PY -u -m azchess.selfplay.loop --config configs/selfplay.yaml > logs/selfplay.l
 
 log "remaining ablations"
 $PY -m azchess.experiments.ablations size --models tiny=runs/sl_tiny/best.pt small=runs/sl_small/best.pt medium=runs/sl_medium/best.pt --sims 0 256
-$PY -m azchess.experiments.ablations selfplay --sl runs/sl_medium/best.pt --loop runs/selfplay --sims 256
+$PY -m azchess.experiments.ablations selfplay --sl runs/sl_medium/best.pt --loop runs/selfplay --sims 256 --h2h-games 300
 $PY -m azchess.experiments.revalidate runs/sl_tiny runs/sl_small runs/sl_medium
 log "done"

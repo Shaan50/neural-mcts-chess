@@ -238,7 +238,10 @@ def cmd_selfplay(a) -> None:
     res = Results(a.out or "results/ablation_selfplay.json")
     loop = Path(a.loop)
     state = json.loads((loop / "state.json").read_text())
-    rl = state["best"]
+    # If no candidate ever passed gating, "best" is still the pretrained net; compare
+    # the latest (ungated) self-play candidate instead so the ablation is meaningful.
+    accepted = state["best_gen"] > 0
+    rl = state["best"] if accepted else state["latest"]
     evaluators: dict = {}
     for name, path in [("pretrained", a.sl), ("selfplay", rl)]:
         key = f"{name}/sims={a.sims}"
@@ -251,7 +254,8 @@ def cmd_selfplay(a) -> None:
                 concurrency=a.concurrency,
                 evaluators=evaluators,
             )
-            res.put(key, {"model": name, "path": path, "sims": a.sims, **r})
+            label = name if name == "pretrained" or accepted else "selfplay (latest candidate, rejected by gating)"
+            res.put(key, {"model": label, "path": path, "sims": a.sims, **r})
     key = f"h2h/sims={a.sims}"
     if not res.has(key) and a.h2h_games:
         res.put(

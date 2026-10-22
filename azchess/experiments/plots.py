@@ -130,10 +130,11 @@ def elo_vs_steps(path: Path, out: Path) -> None:
         label = "raw policy" if sims <= 1 else f"MCTS {sims} visits"
         ax.plot(xs, ys, color=SERIES[k], marker=MARKERS[k], label=label)
         _label_end(ax, xs[-1], ys[-1], f"{ys[-1]:.0f}", SERIES[k])
-    ax.set_title("Elo vs training (Stockfish UCI_Elo scale, 95% CI)")
+    ax.set_title("Raw-policy Elo vs training (95% CI)" if len(by_sims) == 1 else "Elo vs training (95% CI)")
     ax.set_xlabel("training positions (millions)")
-    ax.set_ylabel("Elo")
-    ax.legend(loc="lower right")
+    ax.set_ylabel("Elo (Stockfish UCI_Elo scale)")
+    if len(by_sims) > 1:
+        ax.legend(loc="lower right")
     fig.tight_layout()
     fig.savefig(out / "elo_vs_steps.png", dpi=160)
     plt.close(fig)
@@ -150,7 +151,7 @@ def elo_vs_sims(path: Path, out: Path) -> None:
     fig, ax = plt.subplots(figsize=(6.5, 3.8))
     ax.errorbar(xs, ys, yerr=[lo, hi], color=SERIES[0], marker="o", capsize=3, elinewidth=1.2)
     for x, y in zip(xs, ys):
-        ax.annotate(f"{y:.0f}", (x, y), xytext=(0, 9), textcoords="offset points", ha="center", color=INK_2, fontsize=9)
+        ax.annotate(f"{y:.0f}", (x, y), xytext=(8, -4), textcoords="offset points", ha="left", color=INK_2, fontsize=9)
     ax.set_xscale("log")
     ax.set_xticks(xs)
     ax.set_xticklabels(["raw\npolicy" if e["sims"] <= 1 else str(e["sims"]) for e in entries])
@@ -180,6 +181,10 @@ def elo_vs_size(path: Path, out: Path) -> None:
         for x, y, e in zip(xs, ys, entries):
             ax.annotate(e["model"], (x, y), xytext=(6, -10), textcoords="offset points", color=INK_2, fontsize=8)
     ax.set_xscale("log")
+    sizes = sorted({e["params"] / 1e6 for e in data.values()})
+    ax.set_xticks(sizes)
+    ax.set_xticklabels([f"{x:.2g}M" for x in sizes])
+    ax.minorticks_off()
     ax.set_title("Network size vs strength (95% CI)")
     ax.set_xlabel("parameters (millions, log scale)")
     ax.set_ylabel("Elo")

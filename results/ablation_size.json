@@ -1,0 +1,6001 @@
+{
+  "tiny/sims=0": {
+    "model": "tiny",
+    "path": "runs/sl_tiny/best.pt",
+    "sims": 0,
+    "params": 356076,
+    "config": {
+      "blocks": 4,
+      "filters": 32,
+      "se_ratio": 0,
+      "value_head": "wdl",
+      "value_channels": 32,
+      "value_hidden": 128,
+      "policy_channels": 0,
+      "input_planes": 22
+    },
+    "player": "nn:path=runs/sl_tiny/best.pt,sims=0",
+    "name": "policy",
+    "opponents": [
+      {
+        "spec": "sf:elo=1320,movetime=0.2",
+        "name": "sf_elo1320",
+        "known_elo": 1320.0,
+        "wins": 6,
+        "draws": 0,
+        "losses": 26,
+        "games": 32,
+        "score": 0.1875,
+        "perf_diff": -254.72883903486974,
+        "perf_lo": -404.2780697523286,
+        "perf_hi": -105.17960831741091,
+        "perf_rating": 1065.2711609651303,
+        "terminations": {
+          "checkmate": 32
+        },
+        "games_detail": [
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 134
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 57
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 91
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 52
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 146
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 91
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 26
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 45
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 194
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 79
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 106
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 59
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 83
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 37
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 82
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 41
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 150
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 80
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 78
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 47
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 66
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 60
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 122
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 231
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 42
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 125
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 108
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 69
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 40
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 89
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 97
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 35
+          }
+        ]
+      },
+      {
+        "spec": "sf:elo=1520,movetime=0.2",
+        "name": "sf_elo1520",
+        "known_elo": 1520.0,
+        "wins": 0,
+        "draws": 1,
+        "losses": 31,
+        "games": 32,
+        "score": 0.015625,
+        "perf_diff": -719.7362197814326,
+        "perf_lo": -719.7362197814326,
+        "perf_hi": -334.0854578135318,
+        "perf_rating": 800.2637802185674,
+        "terminations": {
+          "checkmate": 31,
+          "stalemate": 1
+        },
+        "games_detail": [
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 110
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 87
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 72
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 83
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 82
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 117
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 60
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 87
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 54
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 81
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 60
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 79
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 42
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 45
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 96
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 145
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 80
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 51
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 80
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 57
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 140
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 81
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 38
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 113
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 90
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 49
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 202
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 45
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 154
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 15
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 80
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1/2-1/2",
+            "termination": "stalemate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 86
+          }
+        ]
+      },
+      {
+        "spec": "sf:elo=1720,movetime=0.2",
+        "name": "sf_elo1720",
+        "known_elo": 1720.0,
+        "wins": 0,
+        "draws": 1,
+        "losses": 31,
+        "games": 32,
+        "score": 0.015625,
+        "perf_diff": -719.7362197814326,
+        "perf_lo": -719.7362197814326,
+        "perf_hi": -334.0854578135318,
+        "perf_rating": 1000.2637802185674,
+        "terminations": {
+          "checkmate": 31,
+          "threefold repetition": 1
+        },
+        "games_detail": [
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 100
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 139
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 72
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 81
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 106
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 71
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 92
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 105
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 68
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 67
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 36
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 83
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 78
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 95
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 42
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 53
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 62
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 135
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 60
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 85
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 40
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 93
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 50
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 17
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 100
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 73
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 88
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 43
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 102
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 21
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 38
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 61
+          }
+        ]
+      }
+    ],
+    "seconds": 142.5624771118164,
+    "rating": {
+      "elo": 1042.730799430237,
+      "se": 64.71827884844147,
+      "lo": 915.8829728872918,
+      "hi": 1169.5786259731824,
+      "boot_lo": 871.0603441147988,
+      "boot_hi": 1140.877419957768,
+      "games": 108
+    },
+    "probes": [
+      {
+        "spec": "sf:elo=1700,movetime=0.2",
+        "name": "sf_elo1700",
+        "known_elo": 1700.0,
+        "wins": 1,
+        "draws": 0,
+        "losses": 11,
+        "games": 12,
+        "score": 0.08333333333333333,
+        "perf_diff": -416.55707406329003,
+        "perf_lo": -544.6911344070371,
+        "perf_hi": -104.57836720554552,
+        "perf_rating": 1283.44292593671,
+        "terminations": {
+          "checkmate": 12
+        },
+        "games_detail": [
+          {
+            "white": "policy",
+            "black": "sf_elo1700",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 114
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 55
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1700",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 42
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 104
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1700",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 58
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 121
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1700",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 64
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 65
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1700",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 62
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 135
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1700",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 80
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 85
+          }
+        ]
+      }
+    ]
+  },
+  "tiny/sims=256": {
+    "model": "tiny",
+    "path": "runs/sl_tiny/best.pt",
+    "sims": 256,
+    "params": 356076,
+    "config": {
+      "blocks": 4,
+      "filters": 32,
+      "se_ratio": 0,
+      "value_head": "wdl",
+      "value_channels": 32,
+      "value_hidden": 128,
+      "policy_channels": 0,
+      "input_planes": 22
+    },
+    "player": "nn:path=runs/sl_tiny/best.pt,sims=256",
+    "name": "mcts256",
+    "opponents": [
+      {
+        "spec": "sf:elo=1400,movetime=0.2",
+        "name": "sf_elo1400",
+        "known_elo": 1400.0,
+        "wins": 28,
+        "draws": 1,
+        "losses": 3,
+        "games": 32,
+        "score": 0.890625,
+        "perf_diff": 364.31072626329393,
+        "perf_lo": 183.30474996705098,
+        "perf_hi": 533.7469894157888,
+        "perf_rating": 1764.3107262632939,
+        "terminations": {
+          "checkmate": 31,
+          "fifty-move rule": 1
+        },
+        "games_detail": [
+          {
+            "white": "mcts256",
+            "black": "sf_elo1400",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 77
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 90
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1400",
+            "result": "1/2-1/2",
+            "termination": "fifty-move rule",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 237
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 112
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1400",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 57
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 86
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1400",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 102
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 168
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1400",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 53
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 70
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1400",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 65
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 58
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1400",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 65
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 86
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1400",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 53
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 70
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1400",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 104
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 86
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1400",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 59
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 80
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1400",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 71
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 92
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1400",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 87
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 54
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1400",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 93
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 46
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1400",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 44
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 92
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1400",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 31
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 90
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1400",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 93
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 116
+          }
+        ]
+      },
+      {
+        "spec": "sf:elo=1600,movetime=0.2",
+        "name": "sf_elo1600",
+        "known_elo": 1600.0,
+        "wins": 14,
+        "draws": 2,
+        "losses": 16,
+        "games": 32,
+        "score": 0.46875,
+        "perf_diff": -21.74306492903707,
+        "perf_lo": -136.29655091482203,
+        "perf_hi": 93.10166376754525,
+        "perf_rating": 1578.256935070963,
+        "terminations": {
+          "checkmate": 30,
+          "threefold repetition": 1,
+          "insufficient material": 1
+        },
+        "games_detail": [
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 62
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 80
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 108
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 139
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 52
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 49
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 69
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 134
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 82
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 108
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 136
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 130
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 85
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 60
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 114
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 53
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 102
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 78
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 128
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 71
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 150
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 92
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 56
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 216
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 57
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "1/2-1/2",
+            "termination": "insufficient material",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 190
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 59
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 273
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 57
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 55
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 135
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 121
+          }
+        ]
+      },
+      {
+        "spec": "sf:elo=1800,movetime=0.2",
+        "name": "sf_elo1800",
+        "known_elo": 1800.0,
+        "wins": 4,
+        "draws": 4,
+        "losses": 24,
+        "games": 32,
+        "score": 0.1875,
+        "perf_diff": -254.72883903486974,
+        "perf_lo": -380.26440816085255,
+        "perf_hi": -114.26340409126121,
+        "perf_rating": 1545.2711609651303,
+        "terminations": {
+          "checkmate": 28,
+          "threefold repetition": 3,
+          "insufficient material": 1
+        },
+        "games_detail": [
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 52
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 91
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 80
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 53
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 52
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 147
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 71
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 75
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 176
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 107
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 102
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 71
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 64
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 99
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 98
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 84
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 163
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 219
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "1/2-1/2",
+            "termination": "insufficient material",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 119
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 77
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 52
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 139
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 44
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 87
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 112
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 121
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 54
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 166
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 156
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 187
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 85
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 127
+          }
+        ]
+      }
+    ],
+    "seconds": 220.69455099105835,
+    "rating": {
+      "elo": 1612.9839877933298,
+      "se": 36.53198689009647,
+      "lo": 1541.3812934887408,
+      "hi": 1684.5866820979188,
+      "boot_lo": 1551.3275516961994,
+      "boot_hi": 1675.4494193183132,
+      "games": 108
+    },
+    "search": {
+      "evals": 828704,
+      "evals_per_s": 4446.887963487996,
+      "mean_batch": 20.308883715230976
+    },
+    "probes": [
+      {
+        "spec": "sf:elo=1700,movetime=0.2",
+        "name": "sf_elo1700",
+        "known_elo": 1700.0,
+        "wins": 4,
+        "draws": 1,
+        "losses": 7,
+        "games": 12,
+        "score": 0.375,
+        "perf_diff": -88.73949984654253,
+        "perf_lo": -271.6762669618862,
+        "perf_hi": 98.09641483909127,
+        "perf_rating": 1611.2605001534575,
+        "terminations": {
+          "checkmate": 11,
+          "threefold repetition": 1
+        },
+        "games_detail": [
+          {
+            "white": "mcts256",
+            "black": "sf_elo1700",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 176
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 138
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1700",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 117
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 155
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1700",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 48
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 89
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1700",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 111
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 80
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1700",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 88
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 77
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1700",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 136
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 73
+          }
+        ]
+      }
+    ]
+  },
+  "small/sims=0": {
+    "model": "small",
+    "path": "runs/sl_small/best.pt",
+    "sims": 0,
+    "params": 763212,
+    "config": {
+      "blocks": 6,
+      "filters": 64,
+      "se_ratio": 0,
+      "value_head": "wdl",
+      "value_channels": 32,
+      "value_hidden": 128,
+      "policy_channels": 0,
+      "input_planes": 22
+    },
+    "player": "nn:path=runs/sl_small/best.pt,sims=0",
+    "name": "policy",
+    "opponents": [
+      {
+        "spec": "sf:elo=1320,movetime=0.2",
+        "name": "sf_elo1320",
+        "known_elo": 1320.0,
+        "wins": 16,
+        "draws": 4,
+        "losses": 12,
+        "games": 32,
+        "score": 0.5625,
+        "perf_diff": 43.65778777002724,
+        "perf_lo": -68.46424591287197,
+        "perf_hi": 154.59548959334876,
+        "perf_rating": 1363.6577877700272,
+        "terminations": {
+          "checkmate": 28,
+          "fifty-move rule": 1,
+          "threefold repetition": 1,
+          "stalemate": 2
+        },
+        "games_detail": [
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 169
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 78
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 162
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 86
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 59
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 93
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 73
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 80
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 66
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 66
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 92
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "1/2-1/2",
+            "termination": "fifty-move rule",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 289
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 69
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 49
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 72
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 62
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 93
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 104
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 101
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 106
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 46
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 66
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 41
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 161
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 75
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "1/2-1/2",
+            "termination": "stalemate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 140
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "1/2-1/2",
+            "termination": "stalemate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 127
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 57
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 61
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 43
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1320",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 122
+          },
+          {
+            "white": "sf_elo1320",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 65
+          }
+        ]
+      },
+      {
+        "spec": "sf:elo=1520,movetime=0.2",
+        "name": "sf_elo1520",
+        "known_elo": 1520.0,
+        "wins": 11,
+        "draws": 3,
+        "losses": 18,
+        "games": 32,
+        "score": 0.390625,
+        "perf_diff": -77.24983934178465,
+        "perf_lo": -191.45012956517263,
+        "perf_hi": 38.61588520074472,
+        "perf_rating": 1442.7501606582155,
+        "terminations": {
+          "checkmate": 29,
+          "threefold repetition": 3
+        },
+        "games_detail": [
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 112
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 21
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 42
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 165
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 92
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 87
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 38
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 64
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 84
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 77
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 94
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 76
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 122
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 121
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 108
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 76
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 91
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 164
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 164
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 92
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 108
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 138
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 34
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 37
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 55
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 133
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 111
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 94
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 87
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 245
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1520",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 62
+          },
+          {
+            "white": "sf_elo1520",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 57
+          }
+        ]
+      },
+      {
+        "spec": "sf:elo=1720,movetime=0.2",
+        "name": "sf_elo1720",
+        "known_elo": 1720.0,
+        "wins": 3,
+        "draws": 5,
+        "losses": 24,
+        "games": 32,
+        "score": 0.171875,
+        "perf_diff": -273.1532737770256,
+        "perf_lo": -393.37941747895377,
+        "perf_hi": -130.95922591144637,
+        "perf_rating": 1446.8467262229744,
+        "terminations": {
+          "checkmate": 27,
+          "threefold repetition": 4,
+          "stalemate": 1
+        },
+        "games_detail": [
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 153
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 49
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 78
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 49
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 136
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 109
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 148
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 155
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 74
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 91
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 98
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 91
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 92
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1/2-1/2",
+            "termination": "stalemate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 88
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 94
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 107
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 132
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 84
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 111
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 39
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 66
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 97
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 40
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 261
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 134
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 51
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 86
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 87
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 52
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 88
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1720",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 88
+          },
+          {
+            "white": "sf_elo1720",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 61
+          }
+        ]
+      }
+    ],
+    "seconds": 165.77373480796814,
+    "rating": {
+      "elo": 1409.4540519137986,
+      "se": 38.49008547393398,
+      "lo": 1334.013484384888,
+      "hi": 1484.8946194427092,
+      "boot_lo": 1340.5758093952365,
+      "boot_hi": 1475.643029046336,
+      "games": 108
+    },
+    "probes": [
+      {
+        "spec": "sf:elo=1700,movetime=0.2",
+        "name": "sf_elo1700",
+        "known_elo": 1700.0,
+        "wins": 1,
+        "draws": 1,
+        "losses": 10,
+        "games": 12,
+        "score": 0.125,
+        "perf_diff": -338.0392160057027,
+        "perf_lo": -544.6911344070371,
+        "perf_hi": -76.31256745035364,
+        "perf_rating": 1361.9607839942973,
+        "terminations": {
+          "checkmate": 11,
+          "insufficient material": 1
+        },
+        "games_detail": [
+          {
+            "white": "policy",
+            "black": "sf_elo1700",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 144
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 104
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1700",
+            "result": "1/2-1/2",
+            "termination": "insufficient material",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 229
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 123
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1700",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 48
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 45
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1700",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 56
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 31
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1700",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 140
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 103
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1700",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 106
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 43
+          }
+        ]
+      }
+    ]
+  },
+  "small/sims=256": {
+    "model": "small",
+    "path": "runs/sl_small/best.pt",
+    "sims": 256,
+    "params": 763212,
+    "config": {
+      "blocks": 6,
+      "filters": 64,
+      "se_ratio": 0,
+      "value_head": "wdl",
+      "value_channels": 32,
+      "value_hidden": 128,
+      "policy_channels": 0,
+      "input_planes": 22
+    },
+    "player": "nn:path=runs/sl_small/best.pt,sims=256",
+    "name": "mcts256",
+    "opponents": [
+      {
+        "spec": "sf:elo=1600,movetime=0.2",
+        "name": "sf_elo1600",
+        "known_elo": 1600.0,
+        "wins": 23,
+        "draws": 1,
+        "losses": 8,
+        "games": 32,
+        "score": 0.734375,
+        "perf_diff": 176.65957462297743,
+        "perf_lo": 45.467360162558904,
+        "perf_hi": 306.0717645763236,
+        "perf_rating": 1776.6595746229775,
+        "terminations": {
+          "checkmate": 31,
+          "threefold repetition": 1
+        },
+        "games_detail": [
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 113
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 76
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 69
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 187
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 101
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 134
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 87
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 76
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 83
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 72
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 48
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 78
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 106
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 87
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 46
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 88
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 97
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 169
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 109
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 76
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 65
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 114
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 75
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 117
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 76
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 74
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 131
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 106
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 100
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 104
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1600",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 41
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 114
+          }
+        ]
+      },
+      {
+        "spec": "sf:elo=1800,movetime=0.2",
+        "name": "sf_elo1800",
+        "known_elo": 1800.0,
+        "wins": 18,
+        "draws": 1,
+        "losses": 13,
+        "games": 32,
+        "score": 0.578125,
+        "perf_diff": 54.73518396320305,
+        "perf_lo": -63.100200664227366,
+        "perf_hi": 172.18984889920307,
+        "perf_rating": 1854.735183963203,
+        "terminations": {
+          "checkmate": 31,
+          "threefold repetition": 1
+        },
+        "games_detail": [
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 83
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 73
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 103
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 231
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 127
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 135
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 81
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 235
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 72
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 116
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 95
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 190
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 97
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 89
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 134
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 118
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 90
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 130
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 114
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 90
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 59
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 89
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 45
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 106
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 73
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 142
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 59
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 67
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 94
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 82
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1800",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 43
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 93
+          }
+        ]
+      },
+      {
+        "spec": "sf:elo=2000,movetime=0.2",
+        "name": "sf_elo2000",
+        "known_elo": 2000.0,
+        "wins": 19,
+        "draws": 2,
+        "losses": 11,
+        "games": 32,
+        "score": 0.625,
+        "perf_diff": 88.73949984654253,
+        "perf_lo": -29.73452542178116,
+        "perf_hi": 205.90009875128996,
+        "perf_rating": 2088.7394998465425,
+        "terminations": {
+          "checkmate": 30,
+          "insufficient material": 2
+        },
+        "games_detail": [
+          {
+            "white": "mcts256",
+            "black": "sf_elo2000",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 145
+          },
+          {
+            "white": "sf_elo2000",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 132
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2000",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 85
+          },
+          {
+            "white": "sf_elo2000",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 118
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2000",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 77
+          },
+          {
+            "white": "sf_elo2000",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 147
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2000",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 99
+          },
+          {
+            "white": "sf_elo2000",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 138
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2000",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 61
+          },
+          {
+            "white": "sf_elo2000",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 145
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2000",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 44
+          },
+          {
+            "white": "sf_elo2000",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 110
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2000",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 56
+          },
+          {
+            "white": "sf_elo2000",
+            "black": "mcts256",
+            "result": "1/2-1/2",
+            "termination": "insufficient material",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 187
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2000",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 112
+          },
+          {
+            "white": "sf_elo2000",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 69
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2000",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 47
+          },
+          {
+            "white": "sf_elo2000",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 68
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2000",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 179
+          },
+          {
+            "white": "sf_elo2000",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 76
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2000",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 162
+          },
+          {
+            "white": "sf_elo2000",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 72
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2000",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 122
+          },
+          {
+            "white": "sf_elo2000",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 138
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2000",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 81
+          },
+          {
+            "white": "sf_elo2000",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 68
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2000",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 114
+          },
+          {
+            "white": "sf_elo2000",
+            "black": "mcts256",
+            "result": "1/2-1/2",
+            "termination": "insufficient material",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 88
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2000",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 107
+          },
+          {
+            "white": "sf_elo2000",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 125
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2000",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 67
+          },
+          {
+            "white": "sf_elo2000",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 181
+          }
+        ]
+      }
+    ],
+    "seconds": 210.697026014328,
+    "rating": {
+      "elo": 1913.550261215432,
+      "se": 38.07170783287708,
+      "lo": 1838.9297138629931,
+      "hi": 1988.170808567871,
+      "boot_lo": 1828.1714776431545,
+      "boot_hi": 2001.9677669107139,
+      "games": 108
+    },
+    "search": {
+      "evals": 827035,
+      "evals_per_s": 4402.516479769135,
+      "mean_batch": 21.18972585190879
+    },
+    "probes": [
+      {
+        "spec": "sf:elo=1700,movetime=0.2",
+        "name": "sf_elo1700",
+        "known_elo": 1700.0,
+        "wins": 7,
+        "draws": 2,
+        "losses": 3,
+        "games": 12,
+        "score": 0.6666666666666666,
+        "perf_diff": 120.41199826559247,
+        "perf_lo": -65.05248991860284,
+        "perf_hi": 294.66164636629065,
+        "perf_rating": 1820.4119982655925,
+        "terminations": {
+          "checkmate": 10,
+          "threefold repetition": 1,
+          "insufficient material": 1
+        },
+        "games_detail": [
+          {
+            "white": "mcts256",
+            "black": "sf_elo1700",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 103
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 29
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1700",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 77
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 85
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1700",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 82
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 130
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1700",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 63
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 86
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1700",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 107
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 235
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1700",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 69
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "mcts256",
+            "result": "1/2-1/2",
+            "termination": "insufficient material",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 140
+          }
+        ]
+      }
+    ]
+  },
+  "medium/sims=0": {
+    "model": "medium",
+    "path": "runs/sl_medium/best.pt",
+    "sims": 0,
+    "params": 3403788,
+    "config": {
+      "blocks": 10,
+      "filters": 128,
+      "se_ratio": 0,
+      "value_head": "wdl",
+      "value_channels": 32,
+      "value_hidden": 128,
+      "policy_channels": 0,
+      "input_planes": 22
+    },
+    "player": "nn:path=runs/sl_medium/best.pt,sims=0",
+    "name": "policy",
+    "opponents": [
+      {
+        "spec": "sf:elo=1400,movetime=0.2",
+        "name": "sf_elo1400",
+        "known_elo": 1400.0,
+        "wins": 19,
+        "draws": 3,
+        "losses": 10,
+        "games": 32,
+        "score": 0.640625,
+        "perf_diff": 100.42240828085703,
+        "perf_lo": -17.37333241835837,
+        "perf_hi": 215.93171871021593,
+        "perf_rating": 1500.422408280857,
+        "terminations": {
+          "checkmate": 29,
+          "stalemate": 2,
+          "threefold repetition": 1
+        },
+        "games_detail": [
+          {
+            "white": "policy",
+            "black": "sf_elo1400",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 75
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 42
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1400",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 17
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 68
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1400",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 60
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 103
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1400",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 43
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "policy",
+            "result": "1/2-1/2",
+            "termination": "stalemate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 90
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1400",
+            "result": "1/2-1/2",
+            "termination": "stalemate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 99
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 195
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1400",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 69
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 82
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1400",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 29
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 45
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1400",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 72
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 84
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1400",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 61
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 84
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1400",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 106
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 52
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1400",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 32
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 84
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1400",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 73
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 82
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1400",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 83
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 74
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1400",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 34
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 54
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1400",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 122
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 60
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1400",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 34
+          },
+          {
+            "white": "sf_elo1400",
+            "black": "policy",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 30
+          }
+        ]
+      },
+      {
+        "spec": "sf:elo=1600,movetime=0.2",
+        "name": "sf_elo1600",
+        "known_elo": 1600.0,
+        "wins": 6,
+        "draws": 2,
+        "losses": 24,
+        "games": 32,
+        "score": 0.21875,
+        "perf_diff": -221.1367874631123,
+        "perf_lo": -353.24222836053167,
+        "perf_hi": -83.53147648097112,
+        "perf_rating": 1378.8632125368877,
+        "terminations": {
+          "checkmate": 30,
+          "stalemate": 1,
+          "threefold repetition": 1
+        },
+        "games_detail": [
+          {
+            "white": "policy",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 90
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 45
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 104
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 131
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 52
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 109
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 34
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 76
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 216
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 74
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 112
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 61
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1600",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 81
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 72
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 46
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 79
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 48
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 97
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1600",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 103
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 83
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1600",
+            "result": "1/2-1/2",
+            "termination": "stalemate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 93
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 119
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 100
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 87
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1600",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 78
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 93
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 48
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 65
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1600",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 62
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 87
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1600",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 111
+          },
+          {
+            "white": "sf_elo1600",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 129
+          }
+        ]
+      },
+      {
+        "spec": "sf:elo=1800,movetime=0.2",
+        "name": "sf_elo1800",
+        "known_elo": 1800.0,
+        "wins": 3,
+        "draws": 2,
+        "losses": 27,
+        "games": 32,
+        "score": 0.125,
+        "perf_diff": -338.0392160057027,
+        "perf_lo": -489.51412300502983,
+        "perf_hi": -169.25616587707844,
+        "perf_rating": 1461.9607839942973,
+        "terminations": {
+          "checkmate": 30,
+          "threefold repetition": 2
+        },
+        "games_detail": [
+          {
+            "white": "policy",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 84
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 141
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 64
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 87
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 104
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 107
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 58
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "policy",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 85
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 122
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 101
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1800",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 79
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 33
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 52
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 45
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 128
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 63
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 68
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 83
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1800",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 91
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 107
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 90
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 55
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1800",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 65
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 105
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 74
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 123
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 144
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 119
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 72
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "policy",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 69
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1800",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 68
+          },
+          {
+            "white": "sf_elo1800",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 111
+          }
+        ]
+      }
+    ],
+    "seconds": 129.03419613838196,
+    "rating": {
+      "elo": 1465.3061805137486,
+      "se": 38.60464942626912,
+      "lo": 1389.6410676382611,
+      "hi": 1540.971293389236,
+      "boot_lo": 1390.2938712589387,
+      "boot_hi": 1532.004479609678,
+      "games": 108
+    },
+    "probes": [
+      {
+        "spec": "sf:elo=1700,movetime=0.2",
+        "name": "sf_elo1700",
+        "known_elo": 1700.0,
+        "wins": 3,
+        "draws": 2,
+        "losses": 7,
+        "games": 12,
+        "score": 0.3333333333333333,
+        "perf_diff": -120.41199826559247,
+        "perf_lo": -294.6616463662907,
+        "perf_hi": 65.05248991860275,
+        "perf_rating": 1579.5880017344075,
+        "terminations": {
+          "checkmate": 10,
+          "stalemate": 1,
+          "threefold repetition": 1
+        },
+        "games_detail": [
+          {
+            "white": "policy",
+            "black": "sf_elo1700",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 86
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 80
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1700",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 128
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "policy",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 92
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1700",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 68
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "policy",
+            "result": "1/2-1/2",
+            "termination": "stalemate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 125
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1700",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 82
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 77
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1700",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 85
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 89
+          },
+          {
+            "white": "policy",
+            "black": "sf_elo1700",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 122
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "policy",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 103
+          }
+        ]
+      }
+    ]
+  },
+  "medium/sims=256": {
+    "model": "medium",
+    "path": "runs/sl_medium/best.pt",
+    "sims": 256,
+    "params": 3403788,
+    "config": {
+      "blocks": 10,
+      "filters": 128,
+      "se_ratio": 0,
+      "value_head": "wdl",
+      "value_channels": 32,
+      "value_hidden": 128,
+      "policy_channels": 0,
+      "input_planes": 22
+    },
+    "player": "nn:path=runs/sl_medium/best.pt,sims=256",
+    "name": "mcts256",
+    "opponents": [
+      {
+        "spec": "sf:elo=2050,movetime=0.2",
+        "name": "sf_elo2050",
+        "known_elo": 2050.0,
+        "wins": 19,
+        "draws": 3,
+        "losses": 10,
+        "games": 32,
+        "score": 0.640625,
+        "perf_diff": 100.42240828085703,
+        "perf_lo": -17.37333241835837,
+        "perf_hi": 215.93171871021593,
+        "perf_rating": 2150.422408280857,
+        "terminations": {
+          "checkmate": 29,
+          "insufficient material": 1,
+          "threefold repetition": 1,
+          "stalemate": 1
+        },
+        "games_detail": [
+          {
+            "white": "mcts256",
+            "black": "sf_elo2050",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 71
+          },
+          {
+            "white": "sf_elo2050",
+            "black": "mcts256",
+            "result": "1/2-1/2",
+            "termination": "insufficient material",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 184
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2050",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 43
+          },
+          {
+            "white": "sf_elo2050",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 84
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2050",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 61
+          },
+          {
+            "white": "sf_elo2050",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 223
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2050",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 87
+          },
+          {
+            "white": "sf_elo2050",
+            "black": "mcts256",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 135
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2050",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 86
+          },
+          {
+            "white": "sf_elo2050",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 109
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2050",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 154
+          },
+          {
+            "white": "sf_elo2050",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 98
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2050",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 67
+          },
+          {
+            "white": "sf_elo2050",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 74
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2050",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 212
+          },
+          {
+            "white": "sf_elo2050",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 55
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2050",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 47
+          },
+          {
+            "white": "sf_elo2050",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 58
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2050",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 134
+          },
+          {
+            "white": "sf_elo2050",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 64
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2050",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 63
+          },
+          {
+            "white": "sf_elo2050",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 120
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2050",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 112
+          },
+          {
+            "white": "sf_elo2050",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 84
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2050",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 71
+          },
+          {
+            "white": "sf_elo2050",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 82
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2050",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 131
+          },
+          {
+            "white": "sf_elo2050",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 96
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2050",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 200
+          },
+          {
+            "white": "sf_elo2050",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 167
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2050",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 101
+          },
+          {
+            "white": "sf_elo2050",
+            "black": "mcts256",
+            "result": "1/2-1/2",
+            "termination": "stalemate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 132
+          }
+        ]
+      },
+      {
+        "spec": "sf:elo=2250,movetime=0.2",
+        "name": "sf_elo2250",
+        "known_elo": 2250.0,
+        "wins": 13,
+        "draws": 2,
+        "losses": 17,
+        "games": 32,
+        "score": 0.4375,
+        "perf_diff": -43.6577877700272,
+        "perf_lo": -158.66313448109074,
+        "perf_hi": 71.94385192693781,
+        "perf_rating": 2206.3422122299726,
+        "terminations": {
+          "checkmate": 30,
+          "max plies": 1,
+          "threefold repetition": 1
+        },
+        "games_detail": [
+          {
+            "white": "mcts256",
+            "black": "sf_elo2250",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 91
+          },
+          {
+            "white": "sf_elo2250",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 82
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2250",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 69
+          },
+          {
+            "white": "sf_elo2250",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 172
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2250",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 96
+          },
+          {
+            "white": "sf_elo2250",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 355
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2250",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 108
+          },
+          {
+            "white": "sf_elo2250",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 159
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2250",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 58
+          },
+          {
+            "white": "sf_elo2250",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 163
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2250",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 75
+          },
+          {
+            "white": "sf_elo2250",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 86
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2250",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 69
+          },
+          {
+            "white": "sf_elo2250",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 88
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2250",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 119
+          },
+          {
+            "white": "sf_elo2250",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 77
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2250",
+            "result": "1/2-1/2",
+            "termination": "max plies",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 400
+          },
+          {
+            "white": "sf_elo2250",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 247
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2250",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 128
+          },
+          {
+            "white": "sf_elo2250",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 97
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2250",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 158
+          },
+          {
+            "white": "sf_elo2250",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 105
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2250",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 97
+          },
+          {
+            "white": "sf_elo2250",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 138
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2250",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 101
+          },
+          {
+            "white": "sf_elo2250",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 41
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2250",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 80
+          },
+          {
+            "white": "sf_elo2250",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 93
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2250",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 130
+          },
+          {
+            "white": "sf_elo2250",
+            "black": "mcts256",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 74
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2250",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 124
+          },
+          {
+            "white": "sf_elo2250",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 78
+          }
+        ]
+      },
+      {
+        "spec": "sf:elo=2450,movetime=0.2",
+        "name": "sf_elo2450",
+        "known_elo": 2450.0,
+        "wins": 11,
+        "draws": 5,
+        "losses": 16,
+        "games": 32,
+        "score": 0.421875,
+        "perf_diff": -54.73518396320306,
+        "perf_lo": -163.77959657460335,
+        "perf_hi": 56.18587988637571,
+        "perf_rating": 2395.264816036797,
+        "terminations": {
+          "insufficient material": 3,
+          "checkmate": 27,
+          "threefold repetition": 1,
+          "stalemate": 1
+        },
+        "games_detail": [
+          {
+            "white": "mcts256",
+            "black": "sf_elo2450",
+            "result": "1/2-1/2",
+            "termination": "insufficient material",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 150
+          },
+          {
+            "white": "sf_elo2450",
+            "black": "mcts256",
+            "result": "1/2-1/2",
+            "termination": "insufficient material",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 151
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2450",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 85
+          },
+          {
+            "white": "sf_elo2450",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 116
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2450",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 138
+          },
+          {
+            "white": "sf_elo2450",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 94
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2450",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 134
+          },
+          {
+            "white": "sf_elo2450",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 143
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2450",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 117
+          },
+          {
+            "white": "sf_elo2450",
+            "black": "mcts256",
+            "result": "1/2-1/2",
+            "termination": "threefold repetition",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 77
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2450",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 88
+          },
+          {
+            "white": "sf_elo2450",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 127
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2450",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 56
+          },
+          {
+            "white": "sf_elo2450",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. e5 c5",
+            "plies": 107
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2450",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 94
+          },
+          {
+            "white": "sf_elo2450",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. e5 Bf5",
+            "plies": 53
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2450",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 166
+          },
+          {
+            "white": "sf_elo2450",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+            "plies": 151
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2450",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 115
+          },
+          {
+            "white": "sf_elo2450",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+            "plies": 135
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2450",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 134
+          },
+          {
+            "white": "sf_elo2450",
+            "black": "mcts256",
+            "result": "1/2-1/2",
+            "termination": "stalemate",
+            "opening": "1. e4 d6 2. d4 Nf6 3. Nc3 g6",
+            "plies": 148
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2450",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 107
+          },
+          {
+            "white": "sf_elo2450",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 Nf6 2. e5 Nd5 3. d4 d6",
+            "plies": 172
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2450",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 81
+          },
+          {
+            "white": "sf_elo2450",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6",
+            "plies": 45
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2450",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 89
+          },
+          {
+            "white": "sf_elo2450",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6",
+            "plies": 90
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2450",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 104
+          },
+          {
+            "white": "sf_elo2450",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. f4 exf4 3. Nf3 g5",
+            "plies": 109
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2450",
+            "result": "1/2-1/2",
+            "termination": "insufficient material",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 159
+          },
+          {
+            "white": "sf_elo2450",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nc3 Nf6 3. f4 d5",
+            "plies": 138
+          }
+        ]
+      }
+    ],
+    "seconds": 399.7120599746704,
+    "rating": {
+      "elo": 2249.9636988553125,
+      "se": 36.40361807417665,
+      "lo": 2178.6126074299264,
+      "hi": 2321.3147902806986,
+      "boot_lo": 2185.351595719725,
+      "boot_hi": 2318.1541953622695,
+      "games": 120
+    },
+    "search": {
+      "evals": 869565,
+      "evals_per_s": 2393.038022624407,
+      "mean_batch": 19.377061235404224
+    },
+    "probes": [
+      {
+        "spec": "sf:elo=1700,movetime=0.2",
+        "name": "sf_elo1700",
+        "known_elo": 1700.0,
+        "wins": 12,
+        "draws": 0,
+        "losses": 0,
+        "games": 12,
+        "score": 1.0,
+        "perf_diff": 544.6911344070372,
+        "perf_lo": 197.86764133386893,
+        "perf_hi": 544.6911344070372,
+        "perf_rating": 2244.691134407037,
+        "terminations": {
+          "checkmate": 12
+        },
+        "games_detail": [
+          {
+            "white": "mcts256",
+            "black": "sf_elo1700",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 153
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 100
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1700",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 71
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 138
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1700",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 107
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 52
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1700",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 61
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 94
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1700",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 91
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 98
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo1700",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 131
+          },
+          {
+            "white": "sf_elo1700",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 136
+          }
+        ]
+      },
+      {
+        "spec": "sf:elo=2100,movetime=0.2",
+        "name": "sf_elo2100",
+        "known_elo": 2100.0,
+        "wins": 7,
+        "draws": 2,
+        "losses": 3,
+        "games": 12,
+        "score": 0.6666666666666666,
+        "perf_diff": 120.41199826559247,
+        "perf_lo": -65.05248991860284,
+        "perf_hi": 294.66164636629065,
+        "perf_rating": 2220.4119982655925,
+        "terminations": {
+          "checkmate": 10,
+          "stalemate": 1,
+          "insufficient material": 1
+        },
+        "games_detail": [
+          {
+            "white": "mcts256",
+            "black": "sf_elo2100",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 117
+          },
+          {
+            "white": "sf_elo2100",
+            "black": "mcts256",
+            "result": "1/2-1/2",
+            "termination": "stalemate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6",
+            "plies": 142
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2100",
+            "result": "1/2-1/2",
+            "termination": "insufficient material",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 161
+          },
+          {
+            "white": "sf_elo2100",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5",
+            "plies": 139
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2100",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 67
+          },
+          {
+            "white": "sf_elo2100",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+            "plies": 68
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2100",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 83
+          },
+          {
+            "white": "sf_elo2100",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6",
+            "plies": 74
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2100",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 106
+          },
+          {
+            "white": "sf_elo2100",
+            "black": "mcts256",
+            "result": "0-1",
+            "termination": "checkmate",
+            "opening": "1. e4 c5 2. Nc3 Nc6 3. g3 g6",
+            "plies": 84
+          },
+          {
+            "white": "mcts256",
+            "black": "sf_elo2100",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 111
+          },
+          {
+            "white": "sf_elo2100",
+            "black": "mcts256",
+            "result": "1-0",
+            "termination": "checkmate",
+            "opening": "1. e4 e6 2. d4 d5 3. Nc3 Nf6",
+            "plies": 267
+          }
+        ]
+      }
+    ]
+  }
+}
