@@ -4,7 +4,7 @@ A residual CNN policy/value network plus batched Monte-Carlo tree search,
 pretrained on 540k high-rated Lichess games, refined by self-play with gating,
 measured in Elo against calibrated Stockfish, and deployable as a Lichess bot.
 Everything, from data to the final ablations, ran on one laptop GPU (Apple M5,
-16 GB, PyTorch MPS) in about a day of wall-clock time.
+16 GB, PyTorch MPS).
 
 **Play it on Lichess:** [NeuralMCTSBot](https://lichess.org/@/NeuralMCTSBot)
 (online while the author's machine runs it; challenge it to a casual or rated game).
@@ -300,7 +300,7 @@ configuration.
 
 ### Compute budget
 
-| Step | Wall-clock on Apple M5 (16 GB) |
+| Step | Run time on Apple M5 (16 GB) |
 |---|---|
 | Download 3.2 GB prefix / filter 9.8M games / encode 540k games | ~45 min / 70 s / 33 s |
 | Supervised 10×128, 30k steps (31M positions) | ~2.6 h alone (3.3k pos/s) |
@@ -308,7 +308,7 @@ configuration.
 | Self-play, 8 generations (self-play + train + gate) | 95 min |
 | All Elo ladders and ablations (2,304 games vs Stockfish + 300 head-to-head) | ~4 h |
 
-Total: under a day on a laptop, i.e. $0 of cloud credits. On a rented
+Everything ran on a laptop, i.e. $0 of cloud credits. On a rented
 RTX 4090-class GPU (~$0.5–1/h), the same pipeline is roughly 5× faster.
 `configs/sl_large_cuda.yaml` (15×192 SE-ResNet, bf16, ~200M positions) plus
 50k+ self-play games fits inside a $100 budget.
