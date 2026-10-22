@@ -55,8 +55,8 @@ plots: ## render docs/figures
 report: ## markdown tables for the README
 	$(PY) -m azchess.experiments.report > results/RESULTS.md
 
-export: ## export deployable weights
-	$(PY) -m azchess.tools.export runs/sl_medium/best.pt weights/azchess.pt --half
+export: ## export deployable weights (self-play best if the loop has run, else the supervised net)
+	$(PY) -m azchess.tools.export $$($(PY) -c "import json,os; p='runs/selfplay/state.json'; print(json.load(open(p))['best'] if os.path.exists(p) else 'runs/sl_medium/best.pt')") weights/azchess.pt --half
 bench: ## throughput benchmarks
 	$(PY) -m azchess.tools.bench --weights runs/sl_medium/best.pt --out results/bench.json
 uci: ## run the UCI engine
