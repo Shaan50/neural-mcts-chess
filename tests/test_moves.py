@@ -2,7 +2,7 @@ import chess
 import numpy as np
 import pytest
 
-from azchess.encoding.moves import (
+from neural_mcts_chess.encoding.moves import (
     INDEX_TABLE,
     MOVE_TABLE,
     POLICY_SIZE,

@@ -18,7 +18,7 @@
 
 #include "chess.hpp"
 
-namespace azc {
+namespace nmc {
 
 struct SearchParams {
   double cpuct_init = 1.25;     // AlphaZero: c(s) = c_init + log((N + c_base + 1) / c_base)
@@ -164,4 +164,4 @@ class Search {
   uint64_t cache_key(const Position& p) const;
 };
 
-}  // namespace azc
+}  // namespace nmc

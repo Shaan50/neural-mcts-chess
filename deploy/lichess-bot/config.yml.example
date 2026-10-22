@@ -1,4 +1,4 @@
-# lichess-bot configuration for AZChess. Copy to deploy/lichess-bot/config.yml
+# lichess-bot configuration for neural-mcts-chess. Copy to deploy/lichess-bot/config.yml
 # (git-ignored) or let deploy/setup_lichess_bot.sh do it. Keys omitted here take
 # lichess-bot's defaults (see lichess-bot/config.yml.default).
 token: "set-me-or-export-LICHESS_BOT_TOKEN"
@@ -6,7 +6,7 @@ url: "https://lichess.org/"
 
 engine:
   dir: "../engines/"                       # relative to the lichess-bot checkout (deploy/lichess-bot/lichess-bot)
-  name: "azchess.sh"                       # wrapper that launches `python -m azchess.uci`
+  name: "neural-mcts-chess.sh"                       # wrapper that launches `python -m neural_mcts_chess.uci`
   protocol: "uci"
   ponder: false                            # pondering not implemented
   silence_stderr: true                     # torch warnings go to stderr
@@ -57,7 +57,7 @@ challenge:
 greeting:
   hello: "Hi! I'm {me}, an AlphaZero-style engine (residual CNN + MCTS) trained on Lichess games and self-play. Good luck!"
   goodbye: "Good game!"
-  hello_spectators: "AZChess: ResNet policy/value network + batched C++ MCTS. Source: https://github.com/<you>/azchess"
+  hello_spectators: "neural-mcts-chess: ResNet policy/value network + batched C++ MCTS. Source: https://github.com/<you>/neural-mcts-chess"
   goodbye_spectators: "Thanks for watching!"
 
 matchmaking:

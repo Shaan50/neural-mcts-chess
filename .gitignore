@@ -2,17 +2,17 @@
 __pycache__/
 *.pyc
 *.egg-info/
-build/
+/build/
 *.so
 .pytest_cache/
 .ruff_cache/
 .DS_Store
 # large / generated artifacts
-data/
-runs/
-checkpoints/
-logs/
-bin/
+/data/
+/runs/
+/checkpoints/
+/logs/
+/bin/
 deploy/lichess-bot/lichess-bot/
 deploy/lichess-bot/config.yml
 weights/*.pt

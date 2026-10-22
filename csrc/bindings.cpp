@@ -1,4 +1,4 @@
-// pybind11 bindings: azchess._core
+// pybind11 bindings: neural_mcts_chess._core
 #include <cstring>
 
 #include <pybind11/numpy.h>
@@ -9,7 +9,7 @@
 #include "mcts.hpp"
 
 namespace py = pybind11;
-using namespace azc;
+using namespace nmc;
 
 namespace {
 
@@ -70,7 +70,7 @@ py::tuple encode_game(const std::string& fen, const std::vector<std::string>& sa
 }  // namespace
 
 PYBIND11_MODULE(_core, m) {
-  m.doc() = "C++ chess move generation and batched MCTS for azchess";
+  m.doc() = "C++ chess move generation and batched MCTS for neural_mcts_chess";
   init_tables();
   m.attr("POLICY_SIZE") = POLICY_SIZE;
   m.attr("STARTING_FEN") = START_FEN;
@@ -119,7 +119,7 @@ PYBIND11_MODULE(_core, m) {
       .def("perft", &Position::perft)
       .def("piece_type_at", &Position::piece_type_at)
       .def("color_at", &Position::color_at)
-      .def("__repr__", [](const Position& p) { return "<azchess._core.Position '" + p.fen() + "'>"; })
+      .def("__repr__", [](const Position& p) { return "<neural_mcts_chess._core.Position '" + p.fen() + "'>"; })
       .def(py::pickle([](const Position& p) { return py::make_tuple(p.root_fen(), p.move_stack()); },
                       [](py::tuple t) {
                         Position p(t[0].cast<std::string>());

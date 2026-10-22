@@ -3,8 +3,8 @@ import math
 import numpy as np
 import pytest
 
-from azchess.eval.elo import elo_from_score, expected_score, mle_rating, performance, sprt
-from azchess.experiments.ablations import SF_MAX, SF_MIN, ladder_levels
+from neural_mcts_chess.eval.elo import elo_from_score, expected_score, mle_rating, performance, sprt
+from neural_mcts_chess.experiments.ablations import SF_MAX, SF_MIN, ladder_levels
 
 
 def test_expected_score_and_inverse():

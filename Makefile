@@ -21,43 +21,43 @@ test: ## run the test suite
 	$(PY) -m pytest -q -p no:warnings
 
 lint:
-	$(PY) -m ruff check azchess tests && $(PY) -m ruff format --check azchess tests
+	$(PY) -m ruff check neural_mcts_chess tests && $(PY) -m ruff format --check neural_mcts_chess tests
 
 data: ## download a Lichess month prefix, filter 2000+ games, build shards
-	$(PY) -m azchess.data.download --month $(MONTH) --max-bytes $(BYTES)
-	$(PY) -m azchess.data.filter data/raw/lichess_$(MONTH).pgn.zst data/raw/lichess_$(MONTH)_2000plus.pgn.zst
-	$(PY) -m azchess.data.build data/raw/lichess_$(MONTH)_2000plus.pgn.zst data/shards
+	$(PY) -m neural_mcts_chess.data.download --month $(MONTH) --max-bytes $(BYTES)
+	$(PY) -m neural_mcts_chess.data.filter data/raw/lichess_$(MONTH).pgn.zst data/raw/lichess_$(MONTH)_2000plus.pgn.zst
+	$(PY) -m neural_mcts_chess.data.build data/raw/lichess_$(MONTH)_2000plus.pgn.zst data/shards
 
 train-tiny: ## supervised 4x32
-	$(PY) -m azchess.train.supervised --config configs/sl_tiny.yaml
+	$(PY) -m neural_mcts_chess.train.supervised --config configs/sl_tiny.yaml
 train-small: ## supervised 6x64
-	$(PY) -m azchess.train.supervised --config configs/sl_small.yaml
+	$(PY) -m neural_mcts_chess.train.supervised --config configs/sl_small.yaml
 train-medium: ## supervised 10x128 (main network)
-	$(PY) -m azchess.train.supervised --config configs/sl_medium.yaml
+	$(PY) -m neural_mcts_chess.train.supervised --config configs/sl_medium.yaml
 
 selfplay: ## self-play refinement loop with gating
-	$(PY) -m azchess.selfplay.loop --config configs/selfplay.yaml
+	$(PY) -m neural_mcts_chess.selfplay.loop --config configs/selfplay.yaml
 
 accuracy: ## held-out move-prediction accuracy
-	$(PY) -m azchess.experiments.accuracy runs/sl_tiny/best.pt runs/sl_small/best.pt runs/sl_medium/best.pt
+	$(PY) -m neural_mcts_chess.experiments.accuracy runs/sl_tiny/best.pt runs/sl_small/best.pt runs/sl_medium/best.pt
 
 ablations: ## Elo ablations vs Stockfish (search, size, training step, self-play)
-	$(PY) -m azchess.experiments.ablations sims --model runs/sl_medium/best.pt --sims 0 16 64 256 800
-	$(PY) -m azchess.experiments.ablations size --models tiny=runs/sl_tiny/best.pt small=runs/sl_small/best.pt medium=runs/sl_medium/best.pt --sims 0 256
-	$(PY) -m azchess.experiments.ablations steps --run runs/sl_medium --sims 0
-	$(PY) -m azchess.experiments.ablations selfplay --sl runs/sl_medium/best.pt --loop runs/selfplay --sims 256
+	$(PY) -m neural_mcts_chess.experiments.ablations sims --model runs/sl_medium/best.pt --sims 0 16 64 256 800
+	$(PY) -m neural_mcts_chess.experiments.ablations size --models tiny=runs/sl_tiny/best.pt small=runs/sl_small/best.pt medium=runs/sl_medium/best.pt --sims 0 256
+	$(PY) -m neural_mcts_chess.experiments.ablations steps --run runs/sl_medium --sims 0
+	$(PY) -m neural_mcts_chess.experiments.ablations selfplay --sl runs/sl_medium/best.pt --loop runs/selfplay --sims 256
 
 tactics: ## Win At Chess solve rate vs visits
-	$(PY) -m azchess.experiments.tactics medium=runs/sl_medium/best.pt --sims 0 64 256 800 3200
+	$(PY) -m neural_mcts_chess.experiments.tactics medium=runs/sl_medium/best.pt --sims 0 64 256 800 3200
 
 plots: ## render docs/figures
-	$(PY) -m azchess.experiments.plots
+	$(PY) -m neural_mcts_chess.experiments.plots
 report: ## markdown tables for the README
-	$(PY) -m azchess.experiments.report > results/RESULTS.md
+	$(PY) -m neural_mcts_chess.experiments.report > results/RESULTS.md
 
 export: ## export deployable weights (self-play best if the loop has run, else the supervised net)
-	$(PY) -m azchess.tools.export $$($(PY) -c "import json,os; p='runs/selfplay/state.json'; print(json.load(open(p))['best'] if os.path.exists(p) else 'runs/sl_medium/best.pt')") weights/azchess.pt --half
+	$(PY) -m neural_mcts_chess.tools.export $$($(PY) -c "import json,os; p='runs/selfplay/state.json'; print(json.load(open(p))['best'] if os.path.exists(p) else 'runs/sl_medium/best.pt')") weights/neural-mcts-chess.pt --half
 bench: ## throughput benchmarks
-	$(PY) -m azchess.tools.bench --weights runs/sl_medium/best.pt --out results/bench.json
+	$(PY) -m neural_mcts_chess.tools.bench --weights runs/sl_medium/best.pt --out results/bench.json
 uci: ## run the UCI engine
-	$(PY) -m azchess.uci --weights weights/azchess.pt
+	$(PY) -m neural_mcts_chess.uci --weights weights/neural-mcts-chess.pt

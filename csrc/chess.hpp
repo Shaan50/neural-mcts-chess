@@ -8,7 +8,7 @@
 #include <string>
 #include <vector>
 
-namespace azc {
+namespace nmc {
 
 using u64 = uint64_t;
 using Move = uint16_t;  // from | to << 6 | promo << 12  (promo: 0 none, 1 N, 2 B, 3 R, 4 Q)
@@ -126,4 +126,4 @@ class Position {
   void clean_castling();
 };
 
-}  // namespace azc
+}  // namespace nmc

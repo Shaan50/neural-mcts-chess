@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Clone lichess-bot next to this directory, install it into its own venv and
-# point it at the AZChess UCI engine.
+# point it at the neural-mcts-chess UCI engine.
 #
 #   export LICHESS_BOT_TOKEN=...      # token of a Lichess *BOT* account (scope bot:play)
 #   deploy/setup_lichess_bot.sh
@@ -20,5 +20,5 @@ if [ -n "${LICHESS_BOT_TOKEN:-}" ]; then
   sed -i.bak "s|^token: .*|token: \"$LICHESS_BOT_TOKEN\"|" "$CFG" && rm -f "$CFG.bak"
 fi
 ln -sf "$CFG" "$DEST/config.yml"
-[ -f "$HERE/../weights/azchess.pt" ] || echo "warning: weights/azchess.pt missing - run: azchess export runs/<run>/best.pt weights/azchess.pt --half"
+[ -f "$HERE/../weights/neural-mcts-chess.pt" ] || echo "warning: weights/neural-mcts-chess.pt missing - run: neural-mcts-chess export runs/<run>/best.pt weights/neural-mcts-chess.pt --half"
 echo "lichess-bot ready. Start with: cd $DEST && .venv/bin/python lichess-bot.py"

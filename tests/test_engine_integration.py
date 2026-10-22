@@ -9,14 +9,14 @@ import numpy as np
 import pytest
 import torch
 
-from azchess.data.shards import legal_offsets, list_shards, load_shard
-from azchess.eval.match import play_match, summarize
-from azchess.eval.players import MCTSPlayer, PolicyPlayer, RandomPlayer
-from azchess.mcts.pysearch import SearchParams
-from azchess.model.inference import Evaluator
-from azchess.model.network import AZNet, ModelConfig
-from azchess.selfplay.selfplay import SelfPlayConfig, generate
-from azchess.uci.engine import UCIEngine, q_to_cp
+from neural_mcts_chess.data.shards import legal_offsets, list_shards, load_shard
+from neural_mcts_chess.eval.match import play_match, summarize
+from neural_mcts_chess.eval.players import MCTSPlayer, PolicyPlayer, RandomPlayer
+from neural_mcts_chess.mcts.pysearch import SearchParams
+from neural_mcts_chess.model.inference import Evaluator
+from neural_mcts_chess.model.network import AZNet, ModelConfig
+from neural_mcts_chess.selfplay.selfplay import SelfPlayConfig, generate
+from neural_mcts_chess.uci.engine import UCIEngine, q_to_cp
 
 
 @pytest.fixture(scope="module")
@@ -122,7 +122,7 @@ def test_selfplay_generation(evaluator, tmp_path):
 
 
 def test_tactics_suite_parsing_and_solving(evaluator, tmp_path):
-    from azchess.experiments.tactics import load_epd, solve
+    from neural_mcts_chess.experiments.tactics import load_epd, solve
 
     epd = tmp_path / "mini.epd"
     epd.write_text(

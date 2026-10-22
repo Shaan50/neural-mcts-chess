@@ -6,7 +6,7 @@
 #include <sstream>
 #include <stdexcept>
 
-namespace azc {
+namespace nmc {
 
 const char* const START_FEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 
@@ -42,7 +42,7 @@ bool on_board(int f, int r) { return f >= 0 && f < 8 && r >= 0 && r < 8; }
 
 int sign(int x) { return (x > 0) - (x < 0); }
 
-// Mirrors azchess/encoding/moves.py::_plane.
+// Mirrors neural_mcts_chess/encoding/moves.py::_plane.
 int move_plane(int df, int dr, int promo_slot) {
   static const int KN[8][2] = {{1, 2}, {2, 1}, {2, -1}, {1, -2}, {-1, -2}, {-2, -1}, {-2, 1}, {-1, 2}};
   if (promo_slot >= 1 && promo_slot <= 3) {
@@ -650,4 +650,4 @@ u64 Position::perft(int depth) {
   return total;
 }
 
-}  // namespace azc
+}  // namespace nmc

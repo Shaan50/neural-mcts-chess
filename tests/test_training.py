@@ -1,12 +1,12 @@
 import numpy as np
 import torch
 
-from azchess.encoding.board import planes_from_compact_torch
-from azchess.encoding.moves import POLICY_SIZE
-from azchess.game import PyPosition
-from azchess.model.network import AZNet, ModelConfig, value_to_wdl
-from azchess.train.losses import compute_losses, policy_targets, value_targets
-from azchess.train.trainer import TrainConfig, Trainer
+from neural_mcts_chess.encoding.board import planes_from_compact_torch
+from neural_mcts_chess.encoding.moves import POLICY_SIZE
+from neural_mcts_chess.game import PyPosition
+from neural_mcts_chess.model.network import AZNet, ModelConfig, value_to_wdl
+from neural_mcts_chess.train.losses import compute_losses, policy_targets, value_targets
+from neural_mcts_chess.train.trainer import TrainConfig, Trainer
 
 
 def _batch(n=8, seed=0):

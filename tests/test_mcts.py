@@ -4,10 +4,10 @@ import chess
 import numpy as np
 import pytest
 
-from azchess.encoding.moves import POLICY_SIZE
-from azchess.game import PyPosition, make_position
-from azchess.mcts.pysearch import EXPANDED, SearchParams
-from azchess.mcts.search import choose_move, make_cache, make_search, root_policy, run_batched
+from neural_mcts_chess.encoding.moves import POLICY_SIZE
+from neural_mcts_chess.game import PyPosition, make_position
+from neural_mcts_chess.mcts.pysearch import EXPANDED, SearchParams
+from neural_mcts_chess.mcts.search import choose_move, make_cache, make_search, root_policy, run_batched
 
 from .conftest import requires_cpp
 

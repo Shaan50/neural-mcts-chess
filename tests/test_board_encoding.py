@@ -3,7 +3,7 @@ import numpy as np
 import pytest
 import torch
 
-from azchess.encoding.board import (
+from neural_mcts_chess.encoding.board import (
     NO_EP,
     NUM_PLANES,
     bb_as_int64,
@@ -11,7 +11,7 @@ from azchess.encoding.board import (
     encode_compact,
     planes_from_compact_torch,
 )
-from azchess.game import PyPosition
+from neural_mcts_chess.game import PyPosition
 
 from .conftest import random_boards
 

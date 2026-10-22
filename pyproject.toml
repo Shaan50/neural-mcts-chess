@@ -3,7 +3,7 @@ requires = ["setuptools>=68", "wheel", "pybind11>=2.12"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "azchess"
+name = "neural-mcts-chess"
 version = "0.1.0"
 description = "AlphaZero-style chess engine: residual CNN + batched MCTS, pretrained on Lichess and refined by self-play"
 readme = "README.md"
@@ -28,10 +28,10 @@ dev = ["pytest>=8", "ruff>=0.5"]
 wandb = ["wandb>=0.16"]
 
 [project.scripts]
-azchess = "azchess.cli:main"
+neural-mcts-chess = "neural_mcts_chess.cli:main"
 
 [tool.setuptools.packages.find]
-include = ["azchess*"]
+include = ["neural_mcts_chess*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

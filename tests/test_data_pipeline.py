@@ -5,11 +5,11 @@ import chess.pgn
 import numpy as np
 import zstandard
 
-from azchess.data.build import build, movetext_tokens, split_of
-from azchess.data.filter import GameFilter, filter_dump, iter_raw_games
-from azchess.data.loader import ShardStream, make_batch
-from azchess.data.shards import gather_ragged, legal_offsets, list_shards, load_shard
-from azchess.encoding.moves import POLICY_SIZE, move_to_index
+from neural_mcts_chess.data.build import build, movetext_tokens, split_of
+from neural_mcts_chess.data.filter import GameFilter, filter_dump, iter_raw_games
+from neural_mcts_chess.data.loader import ShardStream, make_batch
+from neural_mcts_chess.data.shards import gather_ragged, legal_offsets, list_shards, load_shard
+from neural_mcts_chess.encoding.moves import POLICY_SIZE, move_to_index
 
 PGN = """[Event "Rated Blitz game"]
 [Site "https://lichess.org/aaaaaaaa"]

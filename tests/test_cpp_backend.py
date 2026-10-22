@@ -7,8 +7,8 @@ import chess
 import numpy as np
 import pytest
 
-from azchess.encoding.moves import move_to_index
-from azchess.game import PyPosition
+from neural_mcts_chess.encoding.moves import move_to_index
+from neural_mcts_chess.game import PyPosition
 
 from .conftest import TRICKY_FENS, random_boards, requires_cpp
 
@@ -26,7 +26,7 @@ PERFT = [
 
 @pytest.fixture(scope="module")
 def core():
-    from azchess import _core
+    from neural_mcts_chess import _core
 
     return _core
 

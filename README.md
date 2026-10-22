@@ -1,4 +1,4 @@
-# AZChess: an AlphaZero-style chess engine on a student budget
+# neural-mcts-chess: an AlphaZero-style chess engine on a student budget
 
 A residual CNN policy/value network plus batched Monte-Carlo tree search,
 pretrained on 540k high-rated Lichess games, refined by self-play with gating,
@@ -288,7 +288,7 @@ make plots report export
 make uci                                   # or: deploy/setup_lichess_bot.sh
 ```
 
-All commands are also available as `azchess <command>` (`azchess --help`).
+All commands are also available as `neural-mcts-chess <command>` (`neural-mcts-chess --help`).
 Every long-running step checkpoints and resumes: downloads use HTTP ranges,
 training restores the full optimizer/scheduler/scaler/RNG state, the self-play
 loop keeps a phase-level `state.json`, and ablation results are written per
@@ -318,7 +318,7 @@ Things that went wrong, and how they were found:
   weights then used statistics of different weights, and held-out value loss
   rose from 0.86 to 0.95 while training loss fell. An A/B on the same snapshot
   (raw 0.870 vs EMA 0.953) confirmed the cause. The fix averages BN buffers
-  too, and `azchess.tools.recalibrate` re-estimates BN statistics for old
+  too, and `neural_mcts_chess.tools.recalibrate` re-estimates BN statistics for old
   snapshots (as in SWA's `update_bn`). After recalibration the step-4k snapshot
   improved to 0.836 value loss and 47.2% top-1.
 - **Truncated zstd streams.** Filtering a partially downloaded dump silently
@@ -340,7 +340,7 @@ Things that went wrong, and how they were found:
 
 ```
 csrc/                 C++17: bitboard move generator, batched MCTS, pybind11 bindings
-azchess/
+neural_mcts_chess/
   encoding/           move (8x8x73) and board (22-plane / 100-byte) encodings
   game.py             python-chess backend + backend factory
   data/               download, header filter, shard builder, shard format, batch loader

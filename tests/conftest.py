@@ -3,7 +3,7 @@ import random
 import chess
 import pytest
 
-from azchess.game import cpp_available
+from neural_mcts_chess.game import cpp_available
 
 # Positions that exercise castling, en passant, promotions and pins.
 TRICKY_FENS = [

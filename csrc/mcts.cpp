@@ -4,7 +4,7 @@
 #include <cmath>
 #include <limits>
 
-namespace azc {
+namespace nmc {
 
 void NNCache::insert(uint64_t key, Entry e) {
   if (capacity_ == 0) return;
@@ -316,4 +316,4 @@ std::vector<Move> Search::pv(int max_len) const {
   return out;
 }
 
-}  // namespace azc
+}  // namespace nmc
